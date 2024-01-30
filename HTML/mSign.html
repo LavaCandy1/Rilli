@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="sign.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="main-content">
+        <form action="/Mod_signup" method="post">
+          <div class="input-group">
+            <label for="fullname">Admin ID</label>
+            <input
+              type="text"
+              name="enrollment_id"
+              placeholder="Fullname"
+              id="fullname"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+          </div>
+          <div class="input-group tl">
+            <button type="submit">Sign up</button>
+          </div>
+          <p>OR</p>
+        </form>
+
+        <div class="input-group tt">
+          <a href="http://localhost:8080/rilli_Login">
+            <button type="button">Login</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- partial -->
+  </body>
+</html>
