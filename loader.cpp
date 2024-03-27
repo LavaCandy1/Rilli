@@ -1,7 +1,8 @@
 #include <iostream>
 #include <set>  
 #include <fstream>
-// #include "String_compi.cpp"
+#include "String_compi.cpp"
+#include "Class.cpp"
 
 
 
@@ -207,3 +208,39 @@ Class search(string day,string time,string batch){
 //type return code
 
 
+
+
+// just for loading data from batch bin
+
+multiset<Class> load_data(string batch) {
+  // cout<<"here lol";
+  multiset<Class> loadedData;
+  string filename;
+  filename = batch+".bin";
+
+  ifstream in(filename, ios::binary);
+  if (!in) {
+    cerr << "Error opening file." << endl;
+    exit(0);
+  }
+
+  deserialize(loadedData, in,batch);
+  in.close();
+
+  // Print the loaded data
+  // for (const auto &slot : loadedData) {
+  //   cout << "Room no : " << slot.room_No << endl;
+  //   cout << "Course Code : " << slot.course_Code << endl;
+  //   cout << "Professor : " << slot.professor << endl;
+  //   cout << "Group: " << slot.group << endl;
+  //   cout << "Year: " << slot.year << endl;
+  //   cout << "Time Slot: " << slot.time_Slot << endl;
+  //   cout << "Day : " << slot.day << endl;
+  //   cout << "Type of class : " << slot.type<<endl;
+
+  //     cout << "Type : " << slot.type << endl;
+  //   cout<<"\n\n\n\n\n";
+  // }
+
+  return loadedData;
+}
