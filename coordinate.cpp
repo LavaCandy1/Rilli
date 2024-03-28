@@ -24,21 +24,21 @@ int getCoordinateNumber(const string& day, const string& timeSlot) {
     }
 }
 
-int main() {
-    string inputDay, inputTimeSlot;
+// int main() {
+//     string inputDay, inputTimeSlot;
 
-    cout << "Enter the day (e.g., Monday, Tuesday, etc.): ";
-    getline(cin, inputDay);
+//     cout << "Enter the day (e.g., Monday, Tuesday, etc.): ";
+//     getline(cin, inputDay);
 
-    cout << "Enter the time slot (e.g., 8:30, 9:30, etc.): ";
-    getline(cin, inputTimeSlot);
+//     cout << "Enter the time slot (e.g., 8:30, 9:30, etc.): ";
+//     getline(cin, inputTimeSlot);
 
-    int coordinateNumber = getCoordinateNumber(inputDay, inputTimeSlot);
-    if (coordinateNumber != -1) {
-        cout << "The coordinate/number for " << inputDay << " " << inputTimeSlot << " is: " << coordinateNumber << endl;
-    } else {
-        cout << "Invalid input! Please enter a valid day and time slot." << endl;
-    }
+//     int coordinateNumber = getCoordinateNumber(inputDay, inputTimeSlot);
+//     if (coordinateNumber != -1) {
+//         cout << "The coordinate/number for " << inputDay << " " << inputTimeSlot << " is: " << coordinateNumber << endl;
+//     } else {
+//         cout << "Invalid input! Please enter a valid day and time slot." << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
