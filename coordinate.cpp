@@ -24,6 +24,28 @@ int getCoordinateNumber(const string& day, const string& timeSlot) {
     }
 }
 
+
+pair<string, string> getDayAndTimeSlot(int coordinateNumber) {
+    map<int, string> reverseDayMap = {
+        {1, "Monday"}, {2, "Tuesday"}, {3, "Wednesday"}, {4, "Thursday"},
+        {5, "Friday"}, {6, "Saturday"}
+    };
+
+    map<int, string> reverseTimeSlotMap = {
+        {1, "08:30"}, {2, "09:30"}, {3, "10:30"}, {4, "11:30"}, {5, "12:30"},
+        {6, "13:30"}, {7, "14:30"}, {8, "15:30"}, {9, "16:30"}, {10, "17:30"}
+    };
+
+    if (coordinateNumber > 0 && coordinateNumber <= 60) {
+        int dayNumber = (coordinateNumber - 1) / reverseTimeSlotMap.size() + 1;
+        int timeSlotNumber = (coordinateNumber - 1) % reverseTimeSlotMap.size() + 1;
+        return {reverseDayMap[dayNumber], reverseTimeSlotMap[timeSlotNumber]};
+    } else {
+        return {"Invalid", "Invalid"};
+    }
+}
+
+
 // int main() {
 //     string inputDay, inputTimeSlot;
 
@@ -39,6 +61,20 @@ int getCoordinateNumber(const string& day, const string& timeSlot) {
 //     } else {
 //         cout << "Invalid input! Please enter a valid day and time slot." << endl;
 //     }
+
+//     return 0;
+// }
+
+
+// testing opposite thingi
+// int main() {
+//     int inputCoordinate;
+
+//     cout << "Enter the coordinate number: ";
+//     cin >> inputCoordinate;
+
+//     pair<string, string> result = getDayAndTimeSlot(inputCoordinate);
+//     cout << "The corresponding day and time slot for coordinate number " << inputCoordinate << " is: " << result.first << " " << result.second << endl;
 
 //     return 0;
 // }
