@@ -1,4 +1,4 @@
-
+#include <set>
 class Class{
     public : 
     int slot_Num;
