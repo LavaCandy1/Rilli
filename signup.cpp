@@ -1,7 +1,7 @@
 #include <iostream>
 #include <set>
 #include <fstream>
-#include "String_compi.cpp"
+// #include "String_compi.cpp"
 #include "login.cpp"
 
 using namespace std;

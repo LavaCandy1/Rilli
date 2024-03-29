@@ -11,6 +11,18 @@
 
 using namespace std;
 
+string get_full(string str){
+    if(str=="P"){
+        return "Practical ";
+    }else if(str=="L"){
+        return "Lecture ";
+    }else if(str=="T"){
+        return "Tutorial";
+    }else{
+        return str;
+    }
+}
+
 string year = "2nd Year";
 string group = "G4"; //make a code to find group from batch or vise versa
 string batch = "B27";
@@ -84,7 +96,8 @@ int main() {
             string course_Code = get<0>(result);
             // cout<<course_Code;
             string professor = get<3>(result);
-            string type = get<2>(result);
+            string full_type = get_full(get<2>(result));
+            string type = full_type;
             pair<string,string> result1 = getDayAndTimeSlot(slot_num);
             string day = result1.first;
             string time_Slot = result1.second;

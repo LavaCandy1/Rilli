@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>  
 #include "cpp-httplib\\httplib.h"
+#include "String_compi.cpp"
+#include "Class.cpp"
 #include "signup.cpp"
 #include "input.cpp"
 #include "loader.cpp"
@@ -105,6 +107,17 @@ int main() {
 
     svr.Get("/rilliM_up", [](const httplib::Request& req, httplib::Response& res) {
         std::ifstream html_file("Front End\\rilliM_updtate.html");
+        if (html_file.is_open()) {
+            std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+            res.set_content(html_content, "text/html");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+    svr.Get("/rilliM_del", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream html_file("Front End\\test.html");
         if (html_file.is_open()) {
             std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
             res.set_content(html_content, "text/html");
@@ -274,6 +287,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     course_m = req.get_param_value("course");
     class_type_m = req.get_param_value("type");
 
+    // cout<<year_m<<class_type_m;
 
     mod_res_str(batch_m);
 
@@ -291,12 +305,31 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
 
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
-
+    // cout<<class_type_m<<professor<<group_m<<batch_m;
 
     
     mod_res_str(batch_m);
     res.set_redirect("/rilliM_up");
 
+    });
+
+
+
+    //-----delete(post)-----------
+    //updates into rilliM_up   (moderator res)
+    svr.Post("/rilliM_del", [&](const httplib::Request& req, httplib::Response& res) {
+       string slot_no = req.get_param_value("slot_no_invis");
+       cout<<slot_no;
+    // year_m = req.get_param_value("year");
+    // group_m = req.get_param_value("group");
+    // batch_m = req.get_param_value("batch");
+    // course_m = req.get_param_value("course");
+    // class_type_m = req.get_param_value("type");
+
+
+    // mod_res_str(batch_m);
+
+    res.set_redirect("/rilliM_up");
     });
 
 
@@ -353,12 +386,14 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
         
         string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
         string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
-
-        string roomno_stud[40];
-        string course_stud[40];
-        string teacher_stud[40];
-        string type_stud[40];
-        for (int i = 0; i < 40; ++i) {
+        
+        // important change 40 to 60 for updated csv extraction thingi 
+        int size = 60;
+        string roomno_stud[size];
+        string course_stud[size];
+        string teacher_stud[size];
+        string type_stud[size];
+        for (int i = 0; i < size; ++i) {
         roomno_stud[i] = "DefaultRoom";
         course_stud[i] = "DefaultCourse";
         teacher_stud[i] = "DefaultTeacher";

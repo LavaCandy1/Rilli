@@ -1,8 +1,8 @@
 #include <iostream>
 #include <set>  
 #include <fstream>
-#include "String_compi.cpp"
-#include "Class.cpp"
+// #include "String_compi.cpp"
+// #include "Class.cpp"
 
 
 
