@@ -896,6 +896,18 @@ h3 {
   margin: auto;
 }
 /* *******************************************************************CLASSESSSSSS DEFAULTS***************************************** */
+.Welcome {
+  background-color: #daeae5;
+  text-align: center;
+  text-justify: newspaper;
+  font-size: 40px;
+  margin: auto;
+  width: 80%;
+  border-radius: 9px;
+  user-select: none;
+  color: #19475c;
+}
+
 .Practical {
   background-color: #daeae5;
   text-align: center;
@@ -910,6 +922,7 @@ h3 {
   padding-top: 10px;
 
   height: 96px;
+  border: 1px solid #77c6ad;
 }
 .Practical:hover {
   transform: translateY(-1.2rem);
@@ -948,7 +961,8 @@ h3 {
   font-family: "Rubik", sans-serif;
   padding-top: 10px;
 
-  height: 100px;
+  height: 96px;
+  border: 1px solid #88a3d6;
 }
 .Lecture:hover {
   transform: translateY(-1.2rem);
@@ -2230,6 +2244,14 @@ svg {
   font-size: 0px;
   z-index: -100000;
   cursor: pointer none;
+}
+
+.slot0 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 2;
 }
 
 .slot1 {
