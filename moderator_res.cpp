@@ -419,23 +419,23 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
               <!-- BOXES -->
               
               <div class="SLOT slot1 )"+type[0]+R"(">
-    <form action="" class="slotF">
-    <input type ="text" id="slot_no_invis" placeholder="0"></input>
-      <span>)"+course_Code[0]+R"(</span>
-      <span>)"+teacher[0]+R"(</span>
-      <span>)"+roomno[0]+R"(</span>
-      <a href="" class="CO" ><span class="close">+</span></a>
-      </form>
-    </div>
-<div class="SLOT slot2 )"+type[1]+R"(">
-    <form action="" class="slotF">
-    <input type ="text" id="slot_no_invis" placeholder="0"></input>
-      <span>)"+course_Code[1]+R"(</span>
-      <span>)"+teacher[1]+R"(</span>
-      <span>)"+roomno[1]+R"(</span>
-      <a href="" class="CO" ><span class="close">+</span></a>
-      </form>
-    </div>
+                <form action="" class="slotF">
+                  <input type ="text" id="slot_no_invis" placeholder="0"></input>
+                  <span>)"+course_Code[0]+R"(</span>
+                  <span>)"+teacher[0]+R"(</span>
+                  <span>)"+roomno[0]+R"(</span>
+                  <a href="" class="CO" ><span class="close">+</span></a>
+                  </form>
+              </div>
+      <div class="SLOT slot2 )"+type[1]+R"(">
+        <form action="" class="slotF">
+          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <span>)"+course_Code[1]+R"(</span>
+          <span>)"+teacher[1]+R"(</span>
+          <span>)"+roomno[1]+R"(</span>
+          <a href="" class="CO" ><span class="close">+</span></a>
+        </form>
+      </div>
       <div class="SLOT slot3 )"+type[2]+R"(">
           <form action="" class="slotF">
           <input type ="text" id="slot_no_invis" placeholder="0"></input>
