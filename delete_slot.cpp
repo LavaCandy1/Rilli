@@ -1,5 +1,6 @@
+#include "Class.cpp"
+#include "input.cpp"
 #include "loader.cpp"
-// #include "input.cpp"
 #include <iostream>
 
 using namespace std;
@@ -28,5 +29,5 @@ void delete_slot(string batch,int slot_no){
 
 
 int main(){
-    delete_slot("B40",1);
+    delete_slot("B27",1);
 }

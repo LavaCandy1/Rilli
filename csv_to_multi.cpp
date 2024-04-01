@@ -96,6 +96,7 @@ int main() {
             string course_Code = get<0>(result);
             // cout<<course_Code;
             string professor = get<3>(result);
+            cout<<"-"<<cell<<"-"<<endl;
             string full_type = get_full(get<2>(result));
             string type = full_type;
             pair<string,string> result1 = getDayAndTimeSlot(slot_num);
@@ -113,7 +114,7 @@ int main() {
 
     // cout<<"Outputting Data...\n\n";
     // for(const auto& slot : TimeTable){
-    //     cout<<slot.slot_Num<<"-"<<slot.course_Code<<"-"+slot.day<<"-"+slot.time_Slot<<"\n";
+    //     cout<<slot.slot_Num<<"-"<<slot.professor<<"-"+slot.day<<"-"+slot.time_Slot<<"\n";
     // }
 
 

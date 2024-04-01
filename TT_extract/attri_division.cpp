@@ -24,9 +24,6 @@ tuple<string, string, string, string, string> parse_string(const string& input_s
         return make_tuple(" ", " ", " ", " ", " ");
     }
 }
-
-
-
 //for tesitng and manual running for understanding
 
 // int main() {
