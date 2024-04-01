@@ -19,9 +19,9 @@ void delete_slot(string batch,int slot_no){
   for (const auto &slot : loaded_data) {
     
     if(slot.slot_Num==slot_no){
-      cout << "Slot_number : " << slot.slot_Num<<endl;
-      cout << "Type : " << slot.professor << endl;
-      cout<<"\n\n\n\n\n";
+      // cout << "Slot_number : " << slot.slot_Num<<endl;
+      // cout << "Type : " << slot.professor << endl;
+      // cout<<"\n\n\n\n\n";
       loaded_data.erase(slot);
       loaded_data.insert(Class(slot_no,"","","","","","","","",""));
       break;

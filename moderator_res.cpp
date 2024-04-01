@@ -420,7 +420,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
               
               <div class="SLOT slot1 )"+type[0]+R"(">
                 <form action="/rilliM_del" method="post" class="slotF">
-                  <input type ="text" id="slot_no_invis" placeholder="0"></input>
+                <input type ="text" id="slot_no_invis" name="del_slot" value="1"></input>
                   <span>)"+course_Code[0]+R"(</span>
                   <span>)"+teacher[0]+R"(</span>
                   <span>)"+roomno[0]+R"(</span>
@@ -429,7 +429,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
               </div>
       <div class="SLOT slot2 )"+type[1]+R"(">
         <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+        <input type ="text" id="slot_no_invis" name="del_slot" value="2"></input>
           <span>)"+course_Code[1]+R"(</span>
           <span>)"+teacher[1]+R"(</span>
           <span>)"+roomno[1]+R"(</span>
@@ -438,7 +438,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
       </div>
       <div class="SLOT slot3 )"+type[2]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="3"></input>
             <span>)"+course_Code[2]+R"(</span>
             <span>)"+teacher[2]+R"(</span>
             <span>)"+roomno[2]+R"(</span>
@@ -447,7 +447,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot4 )"+type[3]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="4"></input>
             <span>)"+course_Code[3]+R"(</span>
             <span>)"+teacher[3]+R"(</span>
             <span>)"+roomno[3]+R"(</span>
@@ -456,7 +456,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot5 )"+type[4]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="5"></input>
             <span>)"+course_Code[4]+R"(</span>
             <span>)"+teacher[4]+R"(</span>
             <span>)"+roomno[4]+R"(</span>
@@ -465,7 +465,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot6 )"+type[5]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="6"></input>
             <span>)"+course_Code[5]+R"(</span>
             <span>)"+teacher[5]+R"(</span>
             <span>)"+roomno[5]+R"(</span>
@@ -474,7 +474,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot7 )"+type[6]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="7"></input>
             <span>)"+course_Code[6]+R"(</span>
             <span>)"+teacher[6]+R"(</span>
             <span>)"+roomno[6]+R"(</span>
@@ -483,7 +483,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot8 )"+type[7]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="8"></input>
             <span>)"+course_Code[7]+R"(</span>
             <span>)"+teacher[7]+R"(</span>
             <span>)"+roomno[7]+R"(</span>
@@ -492,7 +492,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot9 )"+type[8]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="9"></input>
             <span>)"+course_Code[8]+R"(</span>
             <span>)"+teacher[8]+R"(</span>
             <span>)"+roomno[8]+R"(</span>
@@ -501,7 +501,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot10 )"+type[9]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="10"></input>
             <span>)"+course_Code[9]+R"(</span>
             <span>)"+teacher[9]+R"(</span>
             <span>)"+roomno[9]+R"(</span>
@@ -510,7 +510,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot11 )"+type[10]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="11"></input>
             <span>)"+course_Code[10]+R"(</span>
             <span>)"+teacher[10]+R"(</span>
             <span>)"+roomno[10]+R"(</span>
@@ -519,7 +519,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot12 )"+type[11]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="12"></input>
             <span>)"+course_Code[11]+R"(</span>
             <span>)"+teacher[11]+R"(</span>
             <span>)"+roomno[11]+R"(</span>
@@ -528,7 +528,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot13 )"+type[12]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="13"></input>
             <span>)"+course_Code[12]+R"(</span>
             <span>)"+teacher[12]+R"(</span>
             <span>)"+roomno[12]+R"(</span>
@@ -537,7 +537,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot14 )"+type[13]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="14"></input>
             <span>)"+course_Code[13]+R"(</span>
             <span>)"+teacher[13]+R"(</span>
             <span>)"+roomno[13]+R"(</span>
@@ -546,7 +546,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot15 )"+type[14]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="15"></input>
             <span>)"+course_Code[14]+R"(</span>
             <span>)"+teacher[14]+R"(</span>
             <span>)"+roomno[14]+R"(</span>
@@ -555,7 +555,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot16 )"+type[15]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="16"></input>
             <span>)"+course_Code[15]+R"(</span>
             <span>)"+teacher[15]+R"(</span>
             <span>)"+roomno[15]+R"(</span>
@@ -564,7 +564,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot17 )"+type[16]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="17"></input>
             <span>)"+course_Code[16]+R"(</span>
             <span>)"+teacher[16]+R"(</span>
             <span>)"+roomno[16]+R"(</span>
@@ -573,7 +573,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot18 )"+type[17]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="18"></input>
             <span>)"+course_Code[17]+R"(</span>
             <span>)"+teacher[17]+R"(</span>
             <span>)"+roomno[17]+R"(</span>
@@ -582,7 +582,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot19 )"+type[18]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="19"></input>
             <span>)"+course_Code[18]+R"(</span>
             <span>)"+teacher[18]+R"(</span>
             <span>)"+roomno[18]+R"(</span>
@@ -591,7 +591,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot20 )"+type[19]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="20"></input>
             <span>)"+course_Code[19]+R"(</span>
             <span>)"+teacher[19]+R"(</span>
             <span>)"+roomno[19]+R"(</span>
@@ -600,7 +600,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot21 )"+type[20]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="21"></input>
             <span>)"+course_Code[20]+R"(</span>
             <span>)"+teacher[20]+R"(</span>
             <span>)"+roomno[20]+R"(</span>
@@ -609,7 +609,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot22 )"+type[21]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="22"></input>
             <span>)"+course_Code[21]+R"(</span>
             <span>)"+teacher[21]+R"(</span>
             <span>)"+roomno[21]+R"(</span>
@@ -618,7 +618,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot23 )"+type[22]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="23"></input>
             <span>)"+course_Code[22]+R"(</span>
             <span>)"+teacher[22]+R"(</span>
             <span>)"+roomno[22]+R"(</span>
@@ -627,7 +627,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot24 )"+type[23]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="24"></input>
             <span>)"+course_Code[23]+R"(</span>
             <span>)"+teacher[23]+R"(</span>
             <span>)"+roomno[23]+R"(</span>
@@ -636,7 +636,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot25 )"+type[24]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="25"></input>
             <span>)"+course_Code[24]+R"(</span>
             <span>)"+teacher[24]+R"(</span>
             <span>)"+roomno[24]+R"(</span>
@@ -645,7 +645,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot26 )"+type[25]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="26"></input>
             <span>)"+course_Code[25]+R"(</span>
             <span>)"+teacher[25]+R"(</span>
             <span>)"+roomno[25]+R"(</span>
@@ -654,7 +654,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot27 )"+type[26]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="27"></input>
             <span>)"+course_Code[26]+R"(</span>
             <span>)"+teacher[26]+R"(</span>
             <span>)"+roomno[26]+R"(</span>
@@ -663,7 +663,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot28 )"+type[27]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="28"></input>
             <span>)"+course_Code[27]+R"(</span>
             <span>)"+teacher[27]+R"(</span>
             <span>)"+roomno[27]+R"(</span>
@@ -672,7 +672,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot29 )"+type[28]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="29"></input>
             <span>)"+course_Code[28]+R"(</span>
             <span>)"+teacher[28]+R"(</span>
             <span>)"+roomno[28]+R"(</span>
@@ -681,7 +681,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot30 )"+type[29]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="30"></input>
             <span>)"+course_Code[29]+R"(</span>
             <span>)"+teacher[29]+R"(</span>
             <span>)"+roomno[29]+R"(</span>
@@ -690,7 +690,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot31 )"+type[30]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="31"></input>
             <span>)"+course_Code[30]+R"(</span>
             <span>)"+teacher[30]+R"(</span>
             <span>)"+roomno[30]+R"(</span>
@@ -699,7 +699,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot32 )"+type[31]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="32"></input>
             <span>)"+course_Code[31]+R"(</span>
             <span>)"+teacher[31]+R"(</span>
             <span>)"+roomno[31]+R"(</span>
@@ -708,7 +708,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot33 )"+type[32]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="33"></input>
             <span>)"+course_Code[32]+R"(</span>
             <span>)"+teacher[32]+R"(</span>
             <span>)"+roomno[32]+R"(</span>
@@ -717,7 +717,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot34 )"+type[33]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="34"></input>
             <span>)"+course_Code[33]+R"(</span>
             <span>)"+teacher[33]+R"(</span>
             <span>)"+roomno[33]+R"(</span>
@@ -726,7 +726,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot35 )"+type[34]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="35"></input>
             <span>)"+course_Code[34]+R"(</span>
             <span>)"+teacher[34]+R"(</span>
             <span>)"+roomno[34]+R"(</span>
@@ -735,7 +735,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot36 )"+type[35]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="36"></input>
             <span>)"+course_Code[35]+R"(</span>
             <span>)"+teacher[35]+R"(</span>
             <span>)"+roomno[35]+R"(</span>
@@ -744,7 +744,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot37 )"+type[36]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="37"></input>
             <span>)"+course_Code[36]+R"(</span>
             <span>)"+teacher[36]+R"(</span>
             <span>)"+roomno[36]+R"(</span>
@@ -753,7 +753,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot38 )"+type[37]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="38"></input>
             <span>)"+course_Code[37]+R"(</span>
             <span>)"+teacher[37]+R"(</span>
             <span>)"+roomno[37]+R"(</span>
@@ -762,7 +762,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot39 )"+type[38]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="39"></input>
             <span>)"+course_Code[38]+R"(</span>
             <span>)"+teacher[38]+R"(</span>
             <span>)"+roomno[38]+R"(</span>
@@ -771,7 +771,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot40 )"+type[39]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="40"></input>
             <span>)"+course_Code[39]+R"(</span>
             <span>)"+teacher[39]+R"(</span>
             <span>)"+roomno[39]+R"(</span>
@@ -780,7 +780,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot41 )"+type[40]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="41"></input>
             <span>)"+course_Code[40]+R"(</span>
             <span>)"+teacher[40]+R"(</span>
             <span>)"+roomno[40]+R"(</span>
@@ -789,7 +789,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot42 )"+type[41]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="42"></input>
             <span>)"+course_Code[41]+R"(</span>
             <span>)"+teacher[41]+R"(</span>
             <span>)"+roomno[41]+R"(</span>
@@ -798,7 +798,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot43 )"+type[42]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="43"></input>
             <span>)"+course_Code[42]+R"(</span>
             <span>)"+teacher[42]+R"(</span>
             <span>)"+roomno[42]+R"(</span>
@@ -807,7 +807,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot44 )"+type[43]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="44"></input>
             <span>)"+course_Code[43]+R"(</span>
             <span>)"+teacher[43]+R"(</span>
             <span>)"+roomno[43]+R"(</span>
@@ -816,7 +816,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot45 )"+type[44]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="45"></input>
             <span>)"+course_Code[44]+R"(</span>
             <span>)"+teacher[44]+R"(</span>
             <span>)"+roomno[44]+R"(</span>
@@ -825,7 +825,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot46 )"+type[45]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="46"></input>
             <span>)"+course_Code[45]+R"(</span>
             <span>)"+teacher[45]+R"(</span>
             <span>)"+roomno[45]+R"(</span>
@@ -834,7 +834,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot47 )"+type[46]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="47"></input>
             <span>)"+course_Code[46]+R"(</span>
             <span>)"+teacher[46]+R"(</span>
             <span>)"+roomno[46]+R"(</span>
@@ -843,7 +843,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot48 )"+type[47]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="48"></input>
             <span>)"+course_Code[47]+R"(</span>
             <span>)"+teacher[47]+R"(</span>
             <span>)"+roomno[47]+R"(</span>
@@ -852,7 +852,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot49 )"+type[48]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="49"></input>
             <span>)"+course_Code[48]+R"(</span>
             <span>)"+teacher[48]+R"(</span>
             <span>)"+roomno[48]+R"(</span>
@@ -861,7 +861,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot50 )"+type[49]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="50"></input>
             <span>)"+course_Code[49]+R"(</span>
             <span>)"+teacher[49]+R"(</span>
             <span>)"+roomno[49]+R"(</span>
@@ -870,7 +870,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot51 )"+type[50]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="51"></input>
             <span>)"+course_Code[50]+R"(</span>
             <span>)"+teacher[50]+R"(</span>
             <span>)"+roomno[50]+R"(</span>
@@ -879,7 +879,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot52 )"+type[51]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="52"></input>
             <span>)"+course_Code[51]+R"(</span>
             <span>)"+teacher[51]+R"(</span>
             <span>)"+roomno[51]+R"(</span>
@@ -888,7 +888,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot53 )"+type[52]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="53"></input>
             <span>)"+course_Code[52]+R"(</span>
             <span>)"+teacher[52]+R"(</span>
             <span>)"+roomno[52]+R"(</span>
@@ -897,7 +897,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot54 )"+type[53]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="54"></input>
             <span>)"+course_Code[53]+R"(</span>
             <span>)"+teacher[53]+R"(</span>
             <span>)"+roomno[53]+R"(</span>
@@ -906,7 +906,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot55 )"+type[54]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="55"></input>
             <span>)"+course_Code[54]+R"(</span>
             <span>)"+teacher[54]+R"(</span>
             <span>)"+roomno[54]+R"(</span>
@@ -915,7 +915,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot56 )"+type[55]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="56"></input>
             <span>)"+course_Code[55]+R"(</span>
             <span>)"+teacher[55]+R"(</span>
             <span>)"+roomno[55]+R"(</span>
@@ -924,7 +924,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot57 )"+type[56]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="57"></input>
             <span>)"+course_Code[56]+R"(</span>
             <span>)"+teacher[56]+R"(</span>
             <span>)"+roomno[56]+R"(</span>
@@ -933,7 +933,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot58 )"+type[57]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="58"></input>
             <span>)"+course_Code[57]+R"(</span>
             <span>)"+teacher[57]+R"(</span>
             <span>)"+roomno[57]+R"(</span>
@@ -942,7 +942,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot59 )"+type[58]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="59"></input>
             <span>)"+course_Code[58]+R"(</span>
             <span>)"+teacher[58]+R"(</span>
             <span>)"+roomno[58]+R"(</span>
@@ -951,7 +951,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </div>
       <div class="SLOT slot60 )"+type[59]+R"(">
           <form action="/rilliM_del" method="post" class="slotF">
-          <input type ="text" id="slot_no_invis" placeholder="0"></input>
+          <input type ="text" id="slot_no_invis" name="del_slot" value="60"></input>
             <span>)"+course_Code[59]+R"(</span>
             <span>)"+teacher[59]+R"(</span>
             <span>)"+roomno[59]+R"(</span>
