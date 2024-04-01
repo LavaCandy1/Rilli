@@ -1,0 +1,6 @@
+For using and of the below please include in order till the one u want to use...
+
+#include "Class.cpp"
+#include "String_compi.cpp"
+#include "input.cpp"
+#include "loader.cpp"

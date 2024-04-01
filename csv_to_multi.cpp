@@ -3,10 +3,11 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <set>
 #include "TT_extract\attri_division.cpp"
 #include "Class.cpp"
 #include "coordinate.cpp"
-#include "auto_save.cpp"
+#include "file_manipulation\auto_save.cpp"
 
 
 using namespace std;
@@ -96,7 +97,7 @@ int main() {
             string course_Code = get<0>(result);
             // cout<<course_Code;
             string professor = get<3>(result);
-            cout<<"-"<<cell<<"-"<<endl;
+            // cout<<"-"<<cell<<"-"<<endl;
             string full_type = get_full(get<2>(result));
             string type = full_type;
             pair<string,string> result1 = getDayAndTimeSlot(slot_num);
@@ -118,16 +119,16 @@ int main() {
     // }
 
 
-    string TimeTableName = batch+".bin";
-    //making a bin file and writing in it
-    ofstream out(TimeTableName, ios::binary);
-    if (!out) {
-        cerr << "Error opening file." << endl;
-        return 1;
-    }
+    // string TimeTableName = batch+".bin";
+    // //making a bin file and writing in it
+    // ofstream out(TimeTableName, ios::binary);
+    // if (!out) {
+    //     cerr << "Error opening file." << endl;
+    //     return 1;
+    // }
 
-    auto_save(TimeTable, out);
-    out.close();
+    auto_save(TimeTable, batch);
+    // out.close();
 
     return 0;
 }

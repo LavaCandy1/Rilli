@@ -1,4 +1,8 @@
-#include <set>
+// must have these includes above this file
+// #include <set>
+
+
+using namespace std;
 class Class{
     public : 
     int slot_Num;
@@ -12,7 +16,7 @@ class Class{
     string day;
     string type;
 
-    Class (int s,string r, string cc,string p,string b,string y,string g,string t,string d,string typ) : slot_Num(s),room_No(r),course_Code(cc),professor(p),batch(b),year(y),group(g),time_Slot(t),day(d),type(typ){}
+    Class (int s,string r, string cc,string p,string b,string y,string g,string t,string d,string type) : slot_Num(s),room_No(r),course_Code(cc),professor(p),batch(b),year(y),group(g),time_Slot(t),day(d),type(type){}
 
     bool operator<(const Class &other) const {
     return this->slot_Num < other.slot_Num;

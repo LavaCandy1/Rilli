@@ -1,29 +1,33 @@
-#include "Class.cpp"
-#include "input.cpp"
-#include "loader.cpp"
 #include <iostream>
+#include <fstream>
+#include <set>
+#include "Class.cpp"
+#include "file_manipulation\auto_save.cpp"
+#include "file_manipulation\deserialization.cpp"
+
 
 using namespace std;
 
 void delete_slot(string batch,int slot_no){
-    
-    multiset<Class> loaded_data = load_data(batch);
+  
+  multiset<Class> loaded_data;
+
+  deserialize(loaded_data,batch);
 
     // Print the loaded data
   for (const auto &slot : loaded_data) {
-    // cout << "Room no : " << slot.room_No << endl;
-    // cout << "Course Code : " << slot.course_Code << endl;
-    // cout << "Professor : " << slot.professor << endl;
-    // cout << "Group: " << slot.group << endl;
-    // cout << "Year: " << slot.year << endl;
-    // cout << "Time Slot: " << slot.time_Slot << endl;
-    // cout << "Day : " << slot.day << endl;
-    // cout << "Type of class : " << slot.type<<endl;
-    cout << "Slot_number : " << slot.slot_Num<<endl;
-
-      cout << "Type : " << slot.type << endl;
-    cout<<"\n\n\n\n\n";
+    
+    if(slot.slot_Num==slot_no){
+      cout << "Slot_number : " << slot.slot_Num<<endl;
+      cout << "Type : " << slot.professor << endl;
+      cout<<"\n\n\n\n\n";
+      loaded_data.erase(slot);
+      loaded_data.insert(Class(slot_no,"","","","","","","","",""));
+      break;
+    }
   }
+
+auto_save(loaded_data,batch);
 
 }
 
