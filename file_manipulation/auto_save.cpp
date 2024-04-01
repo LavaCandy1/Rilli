@@ -1,3 +1,6 @@
+
+
+
 void auto_save(multiset<Class> ms,string batch) {
 
   string TimeTableName = batch+".bin";

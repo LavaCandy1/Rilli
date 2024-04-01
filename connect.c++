@@ -1,14 +1,18 @@
 #include <iostream>
+#include <set>
 #include <fstream>  
 #include "cpp-httplib\\httplib.h"
 #include "String_compi.cpp"
 #include "Class.cpp"
+#include "file_manipulation\auto_save.cpp"
+#include "file_manipulation\deserialization.cpp"
 #include "signup.cpp"
 #include "input.cpp"
 #include "loader.cpp"
 #include "coordinate.cpp"
 #include "student_res.cpp"
 #include "moderator_res.cpp"
+#include "delete_slot.cpp"
 using namespace std;
 
 
@@ -116,16 +120,16 @@ int main() {
         }
     });
 
-    svr.Get("/rilliM_del", [](const httplib::Request& req, httplib::Response& res) {
-        std::ifstream html_file("Front End\\test.html");
-        if (html_file.is_open()) {
-            std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
-            res.set_content(html_content, "text/html");
-        } else {
-            res.status = 404;
-            res.set_content("File not found", "text/plain");
-        }
-    });
+    // svr.Get("/rilliM_del", [](const httplib::Request& req, httplib::Response& res) {
+    //     std::ifstream html_file("Front End\\test.html");
+    //     if (html_file.is_open()) {
+    //         std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+    //         res.set_content(html_content, "text/html");
+    //     } else {
+    //         res.status = 404;
+    //         res.set_content("File not found", "text/plain");
+    //     }
+    // });
 
     svr.Get("/pret2.css", [](const httplib::Request& req, httplib::Response& res) {
         std::ifstream css_file("Front End\\pret2.css");
@@ -319,7 +323,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     //updates into rilliM_up   (moderator res)
     svr.Post("/rilliM_del", [&](const httplib::Request& req, httplib::Response& res) {
        string slot_no = req.get_param_value("slot_no_invis");
-       cout<<slot_no;
+       cout<<endl<<slot_no<<"\nHah";
     // year_m = req.get_param_value("year");
     // group_m = req.get_param_value("group");
     // batch_m = req.get_param_value("batch");
@@ -327,7 +331,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     // class_type_m = req.get_param_value("type");
 
 
-    // mod_res_str(batch_m);
+    mod_res_str(batch_m);
 
     res.set_redirect("/rilliM_up");
     });

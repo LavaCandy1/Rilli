@@ -1,10 +1,11 @@
-#include <iostream>
-#include <fstream>
-#include <set>
-#include "Class.cpp"
-#include "file_manipulation\auto_save.cpp"
-#include "file_manipulation\deserialization.cpp"
+// #include <iostream>
+// #include <fstream>
+// #include <set>
+// #include "Class.cpp"
+// #include "file_manipulation\auto_save.cpp"
+// #include "file_manipulation\deserialization.cpp"
 
+//requires BATCH and SLOT_NO only to delete a perticular class
 
 using namespace std;
 
@@ -32,6 +33,6 @@ auto_save(loaded_data,batch);
 }
 
 
-int main(){
-    delete_slot("B27",1);
-}
+// int main(){
+//     delete_slot("B27",1);
+// }
