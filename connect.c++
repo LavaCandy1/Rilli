@@ -324,12 +324,6 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     svr.Post("/rilliM_del", [&](const httplib::Request& req, httplib::Response& res) {
        string slot_no = req.get_param_value("del_slot");
        cout<<"- "<<slot_no<<" -";
-    // year_m = req.get_param_value("year");
-    // group_m = req.get_param_value("group");
-    // batch_m = req.get_param_value("batch");
-    // course_m = req.get_param_value("course");
-    // class_type_m = req.get_param_value("type");
-
     delete_slot(batch_m,stoi(slot_no));
     mod_res_str(batch_m);
 
