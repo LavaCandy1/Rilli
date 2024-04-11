@@ -39,14 +39,20 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
     />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
   <body onload="pageLoad()">
     <style type="text/css"></style>
 
     <div id="mydiv">
-      <div class="conCon">
         <div class="tt">
-          <button class="item-5" id="changeZIndexButton2"></button>
+          <button class="divClose" id="changeZIndexButton2">
+            <i class="material-symbols-outlined">
+              close
+              </i>
+          </button>
+          <!-- <button class="item-5" id="changeZIndexButton2"></button> -->
         </div>
         <form action="">
           <div class="tName fle">
@@ -128,7 +134,7 @@
             </div>
           </div>
         </form>
-      </div>
+      
     </div>
     <div class="parent">
       <div class="navy">
@@ -157,7 +163,7 @@
           <label class="rills">RILLI</label>
         </div>
       </div>
-      <!-- side f -->
+      <!-- side  -->
 
       <div class="Todo" id="TD">
         <form action="/rilli_mod" method="post" class="sideF">
@@ -346,13 +352,19 @@
       <div class="Main" id="main">
         <div class="calendar">
           <div class="top">
-            <h3>November 2023 /</h3>
+            <h3 id="currentMonthYear"></h3>
             <div class="Ass">
               <button class="button button--bestia" id="changeZIndexButton">
                 <div class="button__bg"></div>
                 <span>+</span>
               </button>
             </div>
+            <!-- <div class="buttonContainer">
+              <button class="topButtons" id="addSlot">+</button>
+          
+             
+            </div> -->
+
           </div>
 
           <div class="NONE days-1">SUN</div>
@@ -647,6 +659,17 @@
         isDragging = false;
       });
 
+             // Get the current date
+    const currentDate = new Date();
+
+// Get the month and year
+const month = currentDate.toLocaleString('default', { month: 'long' });
+const year = currentDate.getFullYear();
+
+// Display the month and year in the h3 element
+const currentMonthYearElement = document.getElementById('currentMonthYear');
+currentMonthYearElement.textContent = `${month} ${year}`;
+
       // Make the text input editable
       var editableTextBox = document.getElementById("editableTextBox");
       editableTextBox.addEventListener("dblclick", function () {
@@ -656,6 +679,8 @@
       editableTextBox.addEventListener("blur", function () {
         editableTextBox.setAttribute("readonly", "readonly");
       });
+
+      
 
       //LOLLLLLLLLLLLLLLLLLLLLLLLLLL
 
@@ -685,7 +710,11 @@
         });
       }
 
+
       updateWeekNumbers();
+
+
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="faltu.js"></script>

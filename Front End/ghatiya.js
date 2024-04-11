@@ -1,16 +1,3 @@
-// DIALOG BOX
-
-const changeZIndexButton = document.getElementById("changeZIndexButton");
-const ccDiv = document.getElementById("mydiv");
-changeZIndexButton.addEventListener("click", function () {
-  ccDiv.style.zIndex = "2";
-});
-
-const changeZIndexButton2 = document.getElementById("changeZIndexButton2");
-changeZIndexButton2.addEventListener("click", function () {
-  ccDiv.style.zIndex = "0";
-});
-
 // SIDEBAR
 // SIDEBAR
 // SIDEBAR
@@ -103,19 +90,7 @@ selectedAll.forEach((selected) => {
       const selectedDisplay = parentDropdown.querySelector(".selected-display");
 
       selectedDisplay.value = inputValue; // Set the value of "selected-display" input
-
-      // Close the dropdown after selection
-      handleDropdown(parentDropdown, parentDropdown.children[1], false);
     });
-  }
-});
-
-// Rest of the code remains unchanged...
-
-// check if anything else ofther than the dropdown is clicked
-window.addEventListener("click", function (e) {
-  if (e.target.closest(".wrapper-dropdown") === null) {
-    closeAllDropdowns();
   }
 });
 
@@ -142,3 +117,16 @@ function handleDropdown(dropdown, arrow, open) {
 }
 
 // USSSSSSSSSSSSSSSSSSSSPPPPPPPPPPPPPPPPPPPPPPPppp
+
+// DIALOG BOX
+
+const changeZIndexButton = document.getElementById("changeZIndexButton");
+const ccDiv = document.getElementById("mydiv");
+changeZIndexButton.addEventListener("click", function () {
+  ccDiv.style.zIndex = "2";
+});
+
+const changeZIndexButton2 = document.getElementById("changeZIndexButton2");
+changeZIndexButton2.addEventListener("click", function () {
+  ccDiv.style.zIndex = "0";
+});
