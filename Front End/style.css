@@ -25,6 +25,13 @@ body {
 }
 
 @font-face {
+  font-family: "mori";
+  src: url("./Assets/Fonts/Mori/PPMori-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Tombstone";
   src: url("./Assets/Fonts/TombstoneBlues.otf") format("opentype");
   font-weight: normal;
@@ -805,7 +812,7 @@ form div h3 {
   /* color: #ff7e76; */
   color: #c9c6cb;
   display: inline-block;
-  font-family: "Poppins", sans-serif;
+  font-family: "mori", sans-serif;
 }
 
 #gola {
