@@ -1747,6 +1747,9 @@ form {
   border-radius: 15px;
 }
 
+.batchInput:focus {
+  outline: none;
+}
 /*  TTTTTTTTTTTTTTTTTIIIIIIIIIIIIIIIIIIIIIMMMMMMMMMMMMMMMMMMMMMMMMMMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
 /*  TTTTTTTTTTTTTTTTTIIIIIIIIIIIIIIIIIIIIIMMMMMMMMMMMMMMMMMMMMMMMMMMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
 /*  TTTTTTTTTTTTTTTTTIIIIIIIIIIIIIIIIIIIIIMMMMMMMMMMMMMMMMMMMMMMMMMMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
@@ -1932,6 +1935,7 @@ form {
   user-select: none;
   margin-bottom: 20px;
   font-family: Arial;
+  border: #494c52 1px solid;
 }
 
 .scrollable-menu {
@@ -2037,6 +2041,21 @@ svg {
   border-radius: 15px;
 }
 
+.batchInput {
+  height: 50px;
+  width: 90%;
+  border-radius: 0px 0px 15px 15px;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  background-color: #1c2028;
+  color: #d4a67d;
+  font-weight: 450;
+  padding-left: 20px;
+  font-size: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: #494c52 1px solid;
+}
 /* USPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
 /* USPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
 /* USPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
