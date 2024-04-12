@@ -3,7 +3,7 @@
 
 void auto_save(multiset<Class> ms,string batch) {
 
-  string TimeTableName = batch+".bin";
+  string TimeTableName = "Bin\\"+batch+".bin";
     //making a bin file and writing in it
     ofstream out(TimeTableName, ios::binary);
     if (!out) {

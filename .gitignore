@@ -1,6 +1,4 @@
-.vscode/settings.json
-.vscode/launch.json
-.vscode/tasks.json
+.vscode/
 test.cpp
 test.exe
 Front End/test.html
@@ -8,3 +6,6 @@ Front End/rilliM_updtate.html
 Front End/rilli_update.html
 TT_extract/step1.csv
 TT_extract/step2.csv
+CsvTables/
+CsvTables1/
+ExcelTables/
