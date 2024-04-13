@@ -2271,6 +2271,8 @@ svg {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
 }
 .slotF span {
   width: 100%;
@@ -2278,6 +2280,10 @@ svg {
 
 .CO {
   opacity: 0;
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 40px;
 }
 .Practical .CO {
   opacity: 1;
