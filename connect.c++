@@ -96,6 +96,78 @@ int main() {
     });
 
 
+
+//---------------------------------------RILLI TEACHER--------------------------------------------------------------
+
+    svr.Get("/rilli_Teacher", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream html_file("Front End\\rilliTeacher.html");
+        if (html_file.is_open()) {
+            std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+            res.set_content(html_content, "text/html");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+    // svr.Get("/rilli_up", [](const httplib::Request& req, httplib::Response& res) {
+    //     std::ifstream html_file("Front End\\rilliTeacher_update.html");
+    //     if (html_file.is_open()) {
+    //         std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+    //         res.set_content(html_content, "text/html");
+    //     } else {
+    //         res.status = 404;
+    //         res.set_content("File not found", "text/plain");
+    //     }
+    // });
+
+
+    svr.Get("/pret.css", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream css_file("Front End\\pret.css");
+        if (css_file.is_open()) {
+            std::string css_content((std::istreambuf_iterator<char>(css_file)), std::istreambuf_iterator<char>());
+            res.set_content(css_content, "text/css");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+    svr.Get("/faltu.js", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream js_file("Front End\\faltu.js");
+        if (js_file.is_open()) {
+            std::string js_content((std::istreambuf_iterator<char>(js_file)), std::istreambuf_iterator<char>());
+            res.set_content(js_content, "application/javascript");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+    // images
+
+    svr.Get("/images/logo.png", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream img_file("Front End\\images\\logo.png", std::ios::binary);
+        if (img_file.is_open()) {
+            std::string img_content((std::istreambuf_iterator<char>(img_file)), std::istreambuf_iterator<char>());
+            res.set_content(img_content, "image/jpeg");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+    svr.Get("/images/New_Me.png", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream img_file("Front End\\images\\New_Me.png", std::ios::binary);
+        if (img_file.is_open()) {
+            std::string img_content((std::istreambuf_iterator<char>(img_file)), std::istreambuf_iterator<char>());
+            res.set_content(img_content, "image/jpeg");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+
+
 //---------------------------------------------Rilli Moderator---------------------------------------
 
     svr.Get("/rilli_mod", [](const httplib::Request& req, httplib::Response& res) {
@@ -184,6 +256,44 @@ int main() {
             res.set_content("File not found", "text/plain");
         }
     });
+
+
+//---------------------------------------RILLI HOMEPAGE--------------------------------------------------------------
+
+    svr.Get("/homepage", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream html_file("Front End\\Homepage.html");
+        if (html_file.is_open()) {
+            std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+            res.set_content(html_content, "text/html");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+
+    svr.Get("/style.css", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream css_file("Front End\\style.css");
+        if (css_file.is_open()) {
+            std::string css_content((std::istreambuf_iterator<char>(css_file)), std::istreambuf_iterator<char>());
+            res.set_content(css_content, "text/css");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+    svr.Get("/Formatting.js", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream js_file("Front End\\Formatting.js");
+        if (js_file.is_open()) {
+            std::string js_content((std::istreambuf_iterator<char>(js_file)), std::istreambuf_iterator<char>());
+            res.set_content(js_content, "application/javascript");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
+
+
 
 
     
