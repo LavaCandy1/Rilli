@@ -30,14 +30,14 @@
       opacity: 0;
     }
     #loginContainer {
-      z-index: -1;
-      opacity: 0;
+      z-index: 10;
+      opacity: 1;
     }
   </style>
   <body>
     <!-- animation -->
 
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="loader-clip clip-top">
         <div class="marquee">
           <div class="marquee-container">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- login and signUp -->
 
     <section>
@@ -113,7 +113,7 @@
         </div>
       </div>
     </section>
-    <div class="box" id="loginContainer">
+    <div class="box err" id="loginContainer">
       <div class="myDiv" id="loginForm">
         <div class="tt">
           <button class="divClose" onclick="changeZIndex(4)">
@@ -124,6 +124,7 @@
           <div class="heading">
             <h3>Login to Rilli</h3>
           </div>
+          <h3 class="errH3">Incorrect Password or Enrollment ID</h3>
           <div class="enroll">
             <h3>Enter your enrollment id</h3>
             <div class="spacer"></div>
