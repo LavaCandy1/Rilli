@@ -567,6 +567,7 @@ h1 {
 .top .topButtons {
   border: solid 3px var(--secondary-color);
   width: 60px;
+  color: var(--secondary-color);
   height: 60px;
   border-radius: 10px;
   background-color: transparent;
