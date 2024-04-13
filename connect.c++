@@ -291,9 +291,8 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     course_m = req.get_param_value("course");
     class_type_m = req.get_param_value("type");
 
-    // cout<<year_m<<class_type_m;
-
-    mod_res_str(batch_m);
+    
+    mod_res_str(batch_m,year_m,course_m);
 
     res.set_redirect("/rilliM_up");
     });
@@ -309,8 +308,6 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
 
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
-    // cout<<class_type_m<<professor<<group_m<<batch_m;
-
     
     mod_res_str(batch_m);
     res.set_redirect("/rilliM_up");
@@ -430,9 +427,6 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     
 
 
-// svr.Post("/api/endpoint", [](const httplib::Request& req, httplib::Response& res) {
-//         res.set_content("Response from C++ backend", "text/plain");
-//     });
 
 
 svr.set_default_headers({

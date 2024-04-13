@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "TT_extract\\attri_division.cpp"
 using namespace std;
 
 //string roomno[],string course[],string teacher[],string type[]
@@ -1091,6 +1092,65 @@ void mod_res_str(string batch_m){
   //   }
   // }
   auto data = load_data(batch_m);
+  int slotno = 0;
+  for(const auto& slot : data){
+    roomno_mod[slotno] = slot.room_No;
+    course_mod[slotno] = slot.course_Code;
+    teacher_mod[slotno] = slot.professor;
+    type_mod[slotno] = slot.type;
+    slotno++;
+    // cout<<slot.slot_Num<<"\t"<<slot.course_Code<<endl;
+  }
+  
+
+  mod_resp(roomno_mod,course_mod,teacher_mod,type_mod);
+
+}
+
+string betterYear(const string& year) {
+    if (year == "1st Year")
+        return "First";
+    else if (year == "2nd Year")
+        return "Second";
+    else if (year == "3rd Year")
+        return "Third";
+    else if (year == "4th Year")
+        return "Fourth";
+    else
+        return " "; // Invalid year
+}
+
+void mod_res_str(string batch_m, string year_m, string course){
+  string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
+  string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
+  int sizeee = 60;
+  string roomno_mod[sizeee];
+  string course_mod[sizeee];
+  string teacher_mod[sizeee];
+  string type_mod[sizeee];
+  for (int i = 0; i < sizeee; ++i) {
+    roomno_mod[i] = "DefaultRoom";
+    course_mod[i] = "DefaultCourse";
+    teacher_mod[i] = "DefaultTeacher";
+    type_mod[i] = "invis";
+  }
+  // 2 list day aur time ki jisse for loop chlega
+  // for(const string& day : weekdays){
+  //   for(const string& time : timeslots){
+  //     Class slot = search(day,time,batch_m);  //yha pr batch use krk usko mod ko show kr rha hu
+  //     int slot_no = getCoordinateNumber(day,time);
+  //     // cout<<day<<" "<<time<<" "<<slot_no<<endl;
+  //     roomno_mod[slot_no-1] = slot.room_No;
+  //     course_mod[slot_no-1] = slot.course_Code;
+  //     teacher_mod[slot_no-1] = slot.professor;
+  //     type_mod[slot_no-1] = slot.type;
+  //   }
+  // }
+  // auto settings = parse_string(batch_m);
+  // string batch = get<2>(settings);
+  string year = betterYear(year_m);
+  string path = "Time_Table_2023-24-even_"+course+"_"+year+"_"+batch_m;
+  auto data = load_data(path);
   int slotno = 0;
   for(const auto& slot : data){
     roomno_mod[slotno] = slot.room_No;
