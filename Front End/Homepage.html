@@ -27,7 +27,7 @@
   <body>
     <!-- animation -->
 
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="loader-clip clip-top">
         <div class="marquee">
           <div class="marquee-container">
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- login and signUp -->
 
     <section>
@@ -74,7 +74,7 @@
               <i class="material-symbols-outlined"> close </i>
             </button>
           </div>
-          <form id="form1" class="forms">
+          <form id="form1" class="forms" action="/rilli_signUp" method="post">
             <div class="heading">
               <h3>Sign in to Rilli</h3>
             </div>
@@ -82,15 +82,25 @@
               <h3>Enter your enrollment id</h3>
 
               <div class="spacer"></div>
-              <input type="text" />
+              <input
+                type="text"
+                name="enrollment_id"
+                placeholder="Enrollment ID"
+              />
+            </div>
+            <div class="enroll">
+              <h3>Enter your Batch</h3>
+
+              <div class="spacer"></div>
+              <input type="text" name="batch" placeholder="BXX" />
             </div>
             <div class="password">
               <h3>Password</h3>
               <div class="spacer"></div>
-              <input type="password" />
+              <input type="password" name="password" placeholder="Password" />
             </div>
             <div class="confirm">
-              <button class="submit">Sign In</button>
+              <button class="submit" type="submit">Sign In</button>
             </div>
           </form>
           <div class="liner">
@@ -110,19 +120,29 @@
             <i class="material-symbols-outlined"> close </i>
           </button>
         </div>
-        <form id="form2" class="forms">
+        <form id="form2" class="forms" action="/rilli_Login?" method="post">
           <div class="heading">
             <h3>Login to Rilli</h3>
           </div>
           <div class="enroll">
             <h3>Enter your enrollment id</h3>
             <div class="spacer"></div>
-            <input type="text" />
+            <input
+              type="text"
+              name="enroll"
+              placeholder="Enrollment ID"
+              required
+            />
           </div>
           <div class="password">
             <h3>Password</h3>
             <div class="spacer"></div>
-            <input type="text" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
           </div>
           <div class="confirm">
             <button class="submit">Login</button>
