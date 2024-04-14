@@ -24,5 +24,32 @@ function toggleAccordion() {
     this.setAttribute("aria-expanded", "true");
   }
 }
+const videos = gsap.utils.toArray(".sp");
 
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
+gsap.registerPlugin(ScrollTrigger);
+
+videos.ScrollTrigger.create({
+  trigger: video,
+  markers: true,
+  onEnter: () => video.play(),
+});
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleScroll() {
+  const video = document.getElementById("vid2");
+  if (isInViewport(video)) {
+    video.play(); // Play the video if it's in the viewport
+  } else {
+    video.pause(); // Pause the video if it's not in the viewport
+  }
+}

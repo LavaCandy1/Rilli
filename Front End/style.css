@@ -113,11 +113,11 @@ body {
   padding: 0vw 15vw;
 }
 #base {
-  font-family: "Domine", serif;
-  margin-top: 148px;
+  font-family: "canopee";
+  margin-top: 103px;
   margin-bottom: auto;
   height: 14vw;
-  font-size: 14vw;
+  font-size: 18vw;
   color: var(--seventh-color);
   transition: 0.4s;
   text-align: center;
@@ -203,17 +203,33 @@ body {
 #desc .placeR {
   background-color: none;
   border: 4px solid var(--sixth-color);
-  width: 450px;
-  height: 450px;
+  width: 477px;
+  height: 477px;
   border-radius: 40px;
   text-align: center;
+  align-items: center;
 }
 
 #desc .placeR span {
   font-size: 430px;
-  color: var(--sixth-color);
   font-family: "canopee";
+  color: transparent;
+  -webkit-text-stroke: 4px var(--sixth-color);
+  transition: 0.4s ease-in-out;
 }
+#desc .placeR span:hover {
+  font-size: 430px;
+  font-family: "canopee";
+  color: var(--sixth-color);
+  -webkit-text-stroke: 4px var(--sixth-color);
+  transition: 0.4s ease-in-out;
+}
+.sp {
+  margin-top: 9px;
+  /* border: 4px solid var(--sixth-color); */
+  border-radius: 40px;
+}
+
 /* FEATUREEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
 /* FEATUREEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
 /* FEATUREEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
@@ -959,16 +975,18 @@ form div h3 {
 }
 
 .marquee-container {
+  font-size: 18vw;
   width: 100%;
   padding-top: 0.2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Domine", serif;
+  font-family: "canopee", serif;
 }
 
 .marquee-container span {
-  font-family: "Domine", serif;
+  font-size: 18vw;
+  font-family: "canopee", serif;
 }
 
 /* SCROLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
