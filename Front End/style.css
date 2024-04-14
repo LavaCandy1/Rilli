@@ -32,6 +32,13 @@ body {
 }
 
 @font-face {
+  font-family: "canopee";
+  src: url("./Assets/Fonts/") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Tombstone";
   src: url("./Assets/Fonts/TombstoneBlues.otf") format("opentype");
   font-weight: normal;
@@ -107,7 +114,7 @@ body {
 }
 #base {
   font-family: "Domine", serif;
-  margin-top: 153px;
+  margin-top: 148px;
   margin-bottom: auto;
   height: 14vw;
   font-size: 14vw;
@@ -505,6 +512,10 @@ a:link {
 }
 
 #socials {
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  background-color: none;
+  border: var(--seventh-color) solid 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;

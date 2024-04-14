@@ -1,4 +1,7 @@
 /*                                                   NAV                                                           */
+body {
+  background-color: var(--base-color);
+}
 :root {
   --base-color: #f6f5f5;
   --primary-color: #bca68c;

@@ -2,6 +2,7 @@
 * {
   font-family: "Montserrat", sans-serif;
   font-family: "Rubik", sans-serif;
+  margin: none;
 }
 :root {
   --base-color: #f6f5f5;
