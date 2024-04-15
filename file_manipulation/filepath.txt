@@ -1,0 +1,4 @@
+string filename;
+  string year_m = betterYear(year);
+  string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
+  filename = "Bin\\"+path+".bin";
