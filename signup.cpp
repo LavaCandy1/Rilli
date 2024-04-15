@@ -1,7 +1,7 @@
 #include <iostream>
 #include <set>
 #include <fstream>
-#include "String_compi.cpp"
+// #include "String_compi.cpp"
 #include "login.cpp"
 
 using namespace std;
@@ -33,7 +33,7 @@ person take_Input() {
     cin >> p;
     cout << "Enter batch : ";
     cin >> batch;
-
+    cout<<"\n--"<<i<<"--\n";
 
     hash<string> hasher;
     auto hashCode = hasher(p);
