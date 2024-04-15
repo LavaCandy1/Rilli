@@ -34,14 +34,17 @@ body {
 .GolGol {
   opacity: 1;
   margin: 0;
-  transition: transform 15s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   user-select: none;
 }
-
 .GolGol:hover {
-  transform: rotate(180000deg);
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
+body {
+  transition: 0.5s ease-in;
+}
 .navy {
   width: 100px;
   height: 100%;
@@ -575,6 +578,14 @@ h1 {
   border-radius: 10px;
   background-color: transparent;
   font-size: 40px;
+  transition: 0.4s ease-in-out;
+}
+.topButtons:hover .material-symbols-outlined {
+  color: var(--base-color);
+}
+
+.topButtons:hover {
+  background-color: var(--secondary-color);
 }
 .topButtons .material-symbols-outlined {
   color: var(--secondary-color);

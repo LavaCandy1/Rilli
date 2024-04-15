@@ -195,9 +195,13 @@ body {
   transition: 0.4s;
 }
 .placeH {
-  background-color: var(--tertiary-color);
   width: 600px;
   height: 600px;
+  border-radius: 40px;
+}
+.place2 {
+  width: 600px;
+  height: 590px;
   border-radius: 40px;
 }
 #desc .placeR {

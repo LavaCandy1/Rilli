@@ -481,9 +481,12 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
     cout << enrollmentID<<" "<< password;
 
-    string role = login_fx(enrollmentID,password);
-    string batch = login_batch(enrollmentID,password);
+    string role = login_fx(enrollmentID,password); // returns role
+    string batch = login_batch(enrollmentID,password); // returns batch (All for mod and techers)
+
+
     cout<<"\n"<<role;
+
 
     if(role=="student"){
         // res.set_redirect("/rilli");
