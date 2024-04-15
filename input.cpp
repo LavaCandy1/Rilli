@@ -239,7 +239,7 @@ int mod_input(string r,string cc,string p,string batch,string y,string g,string 
     //making a bin file and writing in it
     ofstream out(filename, ios::binary | ios::app);
     if (!out) {
-        cerr << "Error opening file." << endl;
+        cerr << "Error opening file. here" << endl;
         return 1;
     }
 
