@@ -33,7 +33,7 @@ person take_Input() {
     cin >> p;
     cout << "Enter batch : ";
     cin >> batch;
-
+    cout<<"\n--"<<i<<"--\n";
 
     hash<string> hasher;
     auto hashCode = hasher(p);
@@ -188,6 +188,45 @@ string mod_signup(string enro,string pass){
     
 }
 
+string teacher_signup(string enro,string pass){
+
+    string batch_all = "All";
+    string role_mod = "teacher";
+    signUp user12;
+    int id1 = pre_exist_check_ID(); //getting useless id (number) for multiset to compare and set things
+
+    // Open the file in append mode to avoid overwriting
+    ofstream out("Log testing 9.bin", ios::binary | ios::app);
+    if (!out) {
+        cerr << "Error opening file." << endl;
+        return 0;
+    }
+
+    hash<string> hasher;
+    auto hashCode = hasher(pass);
+
+    string hashedPass = to_string(hashCode);
+
+    person slot(id1, role_mod, hashedPass,batch_all,enro);
+
+    if(pre_exist_check(slot.enroll)){
+        cout<<"This ID already exsists.";
+        return "noope";
+    }
+        // cout<<"saving";
+        user12.insert_Slot(slot);
+        serialize(user12, out);
+        
+    
+    
+
+    // cout<<"hullluu";
+    out.close();
+    return "done";
+
+
+    
+}
 
 
 

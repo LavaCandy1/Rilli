@@ -183,27 +183,32 @@ int loader(string batch) {
 
 //teacher return code
 
-Class search(string day,string time,string batch){
-  multiset<Class> loadedData;
-  string filename;
-  filename = batch+".bin";
+// Class search(string day,string time,string batch){
+//   multiset<Class> loadedData;
+//   string filename;
+//   string year_m = betterYear(year);
+//   string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
+//   filename = "Bin\\"+path+".bin";
 
-  ifstream in(filename, ios::binary);
-  if (!in) {
-    cerr << "Error opening file." << endl;
-  }
 
-  auto_load(loadedData,batch);
-  in.close();
+//   filename = batch+".bin";
 
-  for(const auto& slot : loadedData){
-    if(caseInsensitiveStringCompare(slot.day,day) && caseInsensitiveStringCompare(slot.time_Slot,time)){
-      return slot;
-    }
-  }
-  Class null_slot = Class(0,"","","","","","","","","");
-    return null_slot;
-}
+//   ifstream in(filename, ios::binary);
+//   if (!in) {
+//     cerr << "Error opening file." << endl;
+//   }
+
+//   auto_load(loadedData,batch);
+//   in.close();
+
+//   for(const auto& slot : loadedData){
+//     if(caseInsensitiveStringCompare(slot.day,day) && caseInsensitiveStringCompare(slot.time_Slot,time)){
+//       return slot;
+//     }
+//   }
+//   Class null_slot = Class(0,"","","","","","","","","");
+//     return null_slot;
+// }
 
 //type return code
 

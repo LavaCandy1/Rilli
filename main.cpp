@@ -1,8 +1,9 @@
 #include <iostream>
+#include "String_compi.cpp"
 // #include "login.cpp"
 #include "signup.cpp"
-#include "input.cpp"
-#include "loader.cpp"
+// #include "input.cpp"
+// #include "loader.cpp"
 using namespace std;
 
 int main(){
@@ -22,17 +23,19 @@ int main(){
                 cout<<"Enter batch : ";
                 string batch;
                 cin>>batch;
-                input(batch);
+                // input(batch);
             } else if(logged_in==2){
                 cout<<"Enter batch : ";
                 string batch;
                 cin>>batch;
-                loader(batch);
+                // loader(batch);
             } else if(logged_in==3){
                 cout<<"Enter batch : ";
                 string batch;
                 cin>>batch;
-                loader(batch);
+                // loader(batch);
+            } else {
+                break;
             }
 
 

@@ -1,10 +1,19 @@
 
-       <html>
+        <html>
   <head>
     <link rel="stylesheet" href="pret.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet"
@@ -21,11 +30,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-
     <style>
       .material-symbols-outlined {
         font-size: 35px;
@@ -33,97 +37,6 @@
       }
     </style>
   </head>
-  <div id="mydiv">
-    <div class="tt">
-      <button class="divClose" id="changeZIndexButton2">
-        <i class="material-symbols-outlined">
-          close
-          </i>
-      </button>
-      <!-- <button class="item-5" id="changeZIndexButton2"></button> -->
-    </div>
-    <form action="">
-      <div class="tName fle">
-        <div class="input-box">
-          <input
-            type="text"
-            class="input"
-            id="username"
-            placeholder=""
-            required
-          />
-          <label for="username">Name</label>
-        </div>
-      </div>
-      <div class="sSubject fle">
-        <div class="input-box">
-          <input
-            type="text"
-            class="input"
-            id="password"
-            placeholder="Subject"
-            required
-          />
-          <label for="p">Subject</label>
-        </div>
-      </div>
-      <div class="roomC fle">
-        <div class="input-box">
-          <input
-            type="text"
-            class="input"
-            id="password"
-            placeholder="Subject"
-            required
-          />
-          <label for="p">Room Code</label>
-        </div>
-      </div>
-      <div class="dayI fle">
-        <div class="wrapper-dropdown" id="dropdown">
-          <input class="selected-display" id="destination" name="day" readonly></input>
-          <svg
-            class="arrow"
-            id="drp-arrow"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="transition-all ml-auto rotate-180"
-          >
-            <path
-              d="M7 14.5l5-5 5 5"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <ul class="dropdown">
-            <li class="item">Monday</li>
-            <li class="item">Tuesday</li>
-            <li class="item">Wednesday</li>
-            <li class="item">Thursday</li>
-            <li class="item">Friday</li>
-          </ul>
-        </div>
-      </div>
-      <div class="rangeT fle">
-        <input type="time" id="time1" name="time1" />
-        <span>------</span>
-        <input type="time" id="time2" name="time2" />
-      </div>
-
-      <div class="sub fle">
-        <div class="input-box">
-          <input type="submit" class="btn-submit" value="Submit" required />
-          <div class="notifi"></div>
-        </div>
-      </div>
-    </form>
-  
-</div>
   <body onload="pageLoad() ">
     <style type="text/css"></style>
     <div class="parent">
@@ -150,7 +63,7 @@
         <div class="bor2"></div>
         <div class="bor3"></div>
         <div class="ril">
-          <label class="rills">RILLI</label>
+          <label class="rills">RILLI</label>  
         </div>
       </div>
       <div class="Todo" id="TD">
@@ -166,19 +79,21 @@
         </div>
       </div>
 
-
       <div class="Main" id="main">
         <div class="calendar">
           <div class="top">
             <h3 id="currentMonthYear"></h3>
             <div class="buttonContainer">
-              <button class="topButtons" id="changeZIndexButton">
-                +
-              </button>
-              <button class="topButtons" id="subRequest">
-                <span class="material-symbols-outlined"> person_search </span>
-              </button>
-            </div>
+              <button class="topButtons" id="prevWeek">
+                <span class="material-symbols-outlined">
+              west
+              </span>
+            </button>
+              <button class="topButtons" id="nextWeek">
+                <span class="material-symbols-outlined">
+                east
+                </span>
+              </div>
 
             <!-- <button class="style-3" id="nextWeek">Prev</button>
             <button class="style-4" id="prevWeek">Next</button> -->
@@ -227,7 +142,7 @@
               <div class="time AM9">17:35</div>
 
               <!-- BOXES -->
-                       <div class="SLOT slot1 ">
+              <div class="SLOT slot1 ">
                 <form action="" class="slotF">
                   
                   <span></span>
@@ -764,115 +679,110 @@
             <span></span>
             <span></span>
             <span></span>
-            
-            </form>
-          </div>
             </div>
           </div>
         </div>
       </div>
-
       <!-- <div class="curr"></div>
       <div class="even"></div> -->
     </div>
     <script>
-      function pageLoad() {
-        displayDay();
-        displayDate();
-        updateWeekNumbers();
-      }
       function themeF() {}
       const Theme = document.getElementById("Theme");
       Theme.onclick = function () {
         document.body.classList.toggle("dark-theme");
       };
 
-      var draggableDiv = document.getElementById("mydiv");
-      var isDragging = false;
-      var offsetX, offsetY;
-
-      draggableDiv.addEventListener("mousedown", function (e) {
-        isDragging = true;
-        offsetX = e.clientX - draggableDiv.getBoundingClientRect().left;
-        offsetY = e.clientY - draggableDiv.getBoundingClientRect().top;
-      });
-
-      document.addEventListener("mousemove", function (e) {
-        if (isDragging) {
-          var x = e.clientX - offsetX;
-          var y = e.clientY - offsetY;
-          draggableDiv.style.left = x + "px";
-          draggableDiv.style.top = y + "px";
-        }
-      });
-
-      document.addEventListener("mouseup", function () {
-        isDragging = false;
-      });
-
-      // Get the current date
-      const currentDate = new Date();
-
-      // Get the month and year
-      const month = currentDate.toLocaleString("default", { month: "long" });
-      const year = currentDate.getFullYear();
-
-      // Display the month and year in the h3 element
-      const currentMonthYearElement =
-        document.getElementById("currentMonthYear");
-      currentMonthYearElement.textContent = `${month} ${year}`;
-
-      function updateWeekNumbers() {
-        const currentDate = new Date();
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
-
-        // Calculate the start of the current week (Sunday)
-        const startDate = new Date(currentDate);
-        startDate.setDate(currentDate.getDate() - currentDate.getDay());
-
-        // Loop through the labels and update their text content with day numbers
-        labels.forEach((label, index) => {
-          const date = new Date(startDate);
-          date.setDate(startDate.getDate() + index);
-          const dayNumber = date.getDate();
-
-          // Wrap around for days below 1 (previous month) or above 31 (next month)
-          label.textContent =
-            dayNumber <= 0
-              ? 31 + dayNumber
-              : dayNumber > 31
-              ? dayNumber - 31
-              : dayNumber;
-        });
+      function pageLoad() {
+        displayDay();
+        displayDate();
+        updateWeekNumbers();
+        themeF();
       }
 
-      // Function to show the next week's day numbers
-      function showNextWeek() {
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
+// Get the current date
+const currentDate = new Date();
 
-        labels.forEach((label) => {
-          const currentNumber = parseInt(label.textContent);
-          label.textContent =
-            currentNumber + 7 > 31 ? currentNumber + 7 - 31 : currentNumber + 7;
-        });
-      }
+// Get the month and year
+const month = currentDate.toLocaleString("default", { month: "long" });
+const year = currentDate.getFullYear();
 
-      // Function to show the previous week's day numbers
-      function showPreviousWeek() {
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
+// Display the month and year in the h3 element
+const currentMonthYearElement =
+  document.getElementById("currentMonthYear");
+currentMonthYearElement.textContent = `${month} ${year}`;
 
-        labels.forEach((label) => {
-          const currentNumber = parseInt(label.textContent);
-          label.textContent =
-            currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
-        });
-      }
+function updateWeekNumbers() {
+  const currentDate = new Date();
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  // Calculate the start of the current week (Sunday)
+  const startDate = new Date(currentDate);
+  startDate.setDate(currentDate.getDate() - currentDate.getDay());
+
+  // Loop through the labels and update their text content with day numbers
+  labels.forEach((label, index) => {
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + index);
+    const dayNumber = date.getDate();
+
+    // Wrap around for days below 1 (previous month) or above 31 (next month)
+    label.textContent =
+      dayNumber <= 0
+        ? 31 + dayNumber
+        : dayNumber > 31
+        ? dayNumber - 31
+        : dayNumber;
+  });
+}
+
+// Function to show the next week's day numbers
+function showNextWeek() {
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  labels.forEach((label) => {
+    const currentNumber = parseInt(label.textContent);
+    label.textContent =
+      currentNumber + 7 > 31 ? currentNumber + 7 - 31 : currentNumber + 7;
+  });
+}
+
+// Function to show the previous week's day numbers
+function showPreviousWeek() {
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  labels.forEach((label) => {
+    const currentNumber = parseInt(label.textContent);
+    label.textContent =
+      currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
+  });
+}
+
+// Add event listeners to the Next and Previous Week buttons
+document
+  .getElementById("nextWeek")
+  .addEventListener("click", showNextWeek);
+document
+  .getElementById("prevWeek")
+  .addEventListener("click", showPreviousWeek);
+
+// Initial call to display the current week's day numbers
+updateWeekNumbers();
+
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+
       function toggleFunction() {
         let isToggled = false;
         const opaElements = document.querySelectorAll(".opa");
@@ -904,82 +814,8 @@
       }
       const toggleButton = document.getElementById("sid");
       toggleButton.addEventListener("click", toggleFunction());
-
-      // Add event listeners to the Next and Previous Week buttons
-      
     </script>
-    <script>
-      const changeZIndexButton = document.getElementById("changeZIndexButton");
-      const ccDiv = document.getElementById("mydiv");
-      changeZIndexButton.addEventListener("click", function () {
-        ccDiv.style.zIndex = "2";
-      });
-      
-      const changeZIndexButton2 = document.getElementById("changeZIndexButton2");
-      changeZIndexButton2.addEventListener("click", function () {
-        ccDiv.style.zIndex = "0";
-      });
-
-      const selectedAll = document.querySelectorAll(".wrapper-dropdown");
-
-selectedAll.forEach((selected) => {
-  const optionsContainer = selected.children[2];
-  const optionsList = selected.querySelectorAll("div.wrapper-dropdown li");
-
-  selected.addEventListener("click", () => {
-    let arrow = selected.children[1];
-
-    if (selected.classList.contains("active")) {
-      handleDropdown(selected, arrow, false);
-    } else {
-      let currentActive = document.querySelector(".wrapper-dropdown.active");
-
-      if (currentActive) {
-        let anotherArrow = currentActive.children[1];
-        handleDropdown(currentActive, anotherArrow, false);
-      }
-
-      handleDropdown(selected, arrow, true);
-    }
-  });
-
-  // Update the display of the dropdown and set the value of "selected-display" input
-  for (let o of optionsList) {
-    o.addEventListener("click", () => {
-      const inputValue = o.textContent; // Get the text content of the selected option
-      const parentDropdown = o.closest(".wrapper-dropdown");
-      const selectedDisplay = parentDropdown.querySelector(".selected-display");
-
-      selectedDisplay.value = inputValue; // Set the value of "selected-display" input
-    });
-  }
-});
-
-// close all the dropdowns
-function closeAllDropdowns() {
-  const selectedAll = document.querySelectorAll(".wrapper-dropdown");
-  selectedAll.forEach((selected) => {
-    const optionsContainer = selected.children[2];
-    let arrow = selected.children[1];
-
-    handleDropdown(selected, arrow, false);
-  });
-}
-
-// open all the dropdowns
-function handleDropdown(dropdown, arrow, open) {
-  if (open) {
-    arrow.classList.add("rotated");
-    dropdown.classList.add("active");
-  } else {
-    arrow.classList.remove("rotated");
-    dropdown.classList.remove("active");
-  }
-}
-      </script>
-      <script src="ghatiya.js"></script>
     <script src="faltu.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
 

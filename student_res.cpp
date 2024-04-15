@@ -14,6 +14,15 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet"
     />
@@ -40,16 +49,20 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
     <style type="text/css"></style>
     <div class="parent">
       <div class="navy">
-        <div class="logo">
-          <img class="GolGol" src="images/logo.png" />
+        <div class="logo" id="sid">
+          <img
+            class="GolGol"
+            src="images/logo.png"
+            onclick="toggleFunction() "
+          />
         </div>
         <div class="log1"><img class="DP" src="images/New_Me.png" /></div>
         <div class="log2">
           <label class="DAY" id="current-day"></label
           ><label class="NO" id="current-date"></label>
         </div>
-        <div class="log3">
-          <i class="bx bx-sun bx-md" style="color: #c8a366"></i>
+        <div class="log3" id="Theme">
+          <i class="bx bx-sun bx-md" style="color: #282729"></i>
         </div>
         <div class="log4" onclick="window.close() ">
           <i class="bx bx-log-out bx-md"></i>
@@ -58,24 +71,40 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
         <div class="bor2"></div>
         <div class="bor3"></div>
         <div class="ril">
-          <label class="rills">RILLI</label>
+          <label class="rills">RILLI</label>  
         </div>
       </div>
-      <div class="Todo">
-        <h1>Todo List</h1>
-        <div class="button_minus" onclick="removeLastExpandableDiv() "></div>
-        <div class="button_plus" onclick="createExpandableDiv() "></div>
-        <div id="expandable-container">
+      <div class="Todo" id="TD">
+        <h1 id="sid" class="opa">Todo List</h1>
+        <div
+          class="button_minus opa"
+          onclick="removeLastExpandableDiv() "
+          id=""
+        ></div>
+        <div class="button_plus opa" onclick="createExpandableDiv() "></div>
+        <div id="expandable-container" class="opa">
           <!-- Existing expandable divs or new ones will be added here -->
         </div>
       </div>
 
-      <div class="Main">
+      <div class="Main" id="main">
         <div class="calendar">
           <div class="top">
-            <h3>November 2023 /</h3>
-            <button class="style-3" id="nextWeek">Prev</button>
-            <button class="style-4" id="prevWeek">Next</button>
+            <h3 id="currentMonthYear"></h3>
+            <div class="buttonContainer">
+              <button class="topButtons" id="prevWeek">
+                <span class="material-symbols-outlined">
+              west
+              </span>
+            </button>
+              <button class="topButtons" id="nextWeek">
+                <span class="material-symbols-outlined">
+                east
+                </span>
+              </div>
+
+            <!-- <button class="style-3" id="nextWeek">Prev</button>
+            <button class="style-4" id="prevWeek">Next</button> -->
           </div>
           <div class="NONE days-1">SUN</div>
           <div class="NONE days-2">MON</div>
@@ -658,9 +687,6 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
             <span>)"+course_Code[59]+R"(</span>
             <span>)"+teacher[59]+R"(</span>
             <span>)"+roomno[59]+R"(</span>
-            
-            </form>
-          </div>
             </div>
           </div>
         </div>
@@ -669,84 +695,181 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
       <div class="even"></div> -->
     </div>
     <script>
+      function themeF() {}
+      const Theme = document.getElementById("Theme");
+      Theme.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+
       function pageLoad() {
         displayDay();
         displayDate();
         updateWeekNumbers();
-      }
-      function updateWeekNumbers() {
-        const currentDate = new Date();
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
-
-        // Calculate the start of the current week (Sunday)
-        const startDate = new Date(currentDate);
-        startDate.setDate(currentDate.getDate() - currentDate.getDay());
-
-        // Loop through the labels and update their text content with day numbers
-        labels.forEach((label, index) => {
-          const date = new Date(startDate);
-          date.setDate(startDate.getDate() + index);
-          const dayNumber = date.getDate();
-
-          // Wrap around for days below 1 (previous month) or above 31 (next month)
-          label.textContent =
-            dayNumber <= 0
-              ? 31 + dayNumber
-              : dayNumber > 31
-              ? dayNumber - 31
-              : dayNumber;
-        });
+        themeF();
       }
 
-      // Function to show the next week's day numbers
-      function showNextWeek() {
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
+// Get the current date
+const currentDate = new Date();
 
-        labels.forEach((label) => {
-          const currentNumber = parseInt(label.textContent);
-          label.textContent =
-            currentNumber + 7 > 31 ? currentNumber + 7 - 31 : currentNumber + 7;
-        });
+// Get the month and year
+const month = currentDate.toLocaleString("default", { month: "long" });
+const year = currentDate.getFullYear();
+
+// Display the month and year in the h3 element
+const currentMonthYearElement =
+  document.getElementById("currentMonthYear");
+currentMonthYearElement.textContent = `${month} ${year}`;
+
+function updateWeekNumbers() {
+  const currentDate = new Date();
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  // Calculate the start of the current week (Sunday)
+  const startDate = new Date(currentDate);
+  startDate.setDate(currentDate.getDate() - currentDate.getDay());
+
+  // Loop through the labels and update their text content with day numbers
+  labels.forEach((label, index) => {
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + index);
+    const dayNumber = date.getDate();
+
+    // Wrap around for days below 1 (previous month) or above 31 (next month)
+    label.textContent =
+      dayNumber <= 0
+        ? 31 + dayNumber
+        : dayNumber > 31
+        ? dayNumber - 31
+        : dayNumber;
+  });
+}
+
+// Function to show the next week's day numbers
+function showNextWeek() {
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  labels.forEach((label) => {
+    const currentNumber = parseInt(label.textContent);
+    label.textContent =
+      currentNumber + 7 > 31 ? currentNumber + 7 - 31 : currentNumber + 7;
+  });
+}
+
+// Function to show the previous week's day numbers
+function showPreviousWeek() {
+  const labels = document.querySelectorAll(
+    ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+  );
+
+  labels.forEach((label) => {
+    const currentNumber = parseInt(label.textContent);
+    label.textContent =
+      currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
+  });
+}
+
+// Add event listeners to the Next and Previous Week buttons
+document
+  .getElementById("nextWeek")
+  .addEventListener("click", showNextWeek);
+document
+  .getElementById("prevWeek")
+  .addEventListener("click", showPreviousWeek);
+
+// Initial call to display the current week's day numbers
+updateWeekNumbers();
+
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+      // SIDEBAR
+
+      function toggleFunction() {
+        let isToggled = false;
+        const opaElements = document.querySelectorAll(".opa");
+        const sid = document.getElementById("sid");
+        const TD = document.getElementById("TD");
+        const main = document.getElementById("main");
+        return function () {
+          isToggled = !isToggled;
+          if (isToggled) {
+            TD.style.width = "450px";
+            main.style.marginLeft = "450px";
+            opaElements.forEach((element) => {
+              element.style.transitionDuration = "0.3s";
+            });
+            setTimeout(function () {
+              opaElements.forEach((element) => {
+                element.style.opacity = 1;
+              });
+            }, 600);
+          } else {
+            TD.style.width = "0";
+            main.style.marginLeft = "0";
+            opaElements.forEach((element) => {
+              element.style.opacity = "0";
+              element.style.transitionDuration = "0.3s";
+            });
+          }
+        };
       }
-
-      // Function to show the previous week's day numbers
-      function showPreviousWeek() {
-        const labels = document.querySelectorAll(
-          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
-        );
-
-        labels.forEach((label) => {
-          const currentNumber = parseInt(label.textContent);
-          label.textContent =
-            currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
-        });
-      }
-
-      // Add event listeners to the Next and Previous Week buttons
-      document
-        .getElementById("nextWeek")
-        .addEventListener("click", showNextWeek);
-      document
-        .getElementById("prevWeek")
-        .addEventListener("click", showPreviousWeek);
-
-      // Initial call to display the current week's day numbers
-      updateWeekNumbers();
+      const toggleButton = document.getElementById("sid");
+      toggleButton.addEventListener("click", toggleFunction());
     </script>
     <script src="faltu.js"></script>
   </body>
 </html>
+
 
     )";
 
     return htmlContent;
 }
 
-int student_resp(string roomno[],string course[],string teacher[],string type[]) {
+// int student_resp(string roomno[],string course[],string teacher[],string type[]) {
+int student_resp(string batch_m, string enroll) {
+
+  //enroll se year aur course nikalna
+
+  // testing values - 
+  string course_m = "BTECH";
+  string year_m = "1st Year";
+
+  string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
+  string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
+  int sizeee = 60;
+  string roomno[sizeee];
+  string course[sizeee];
+  string teacher[sizeee];
+  string type[sizeee];
+  for (int i = 0; i < sizeee; ++i) {
+    roomno[i] = "DefaultRoom";
+    course[i] = "DefaultCourse";
+    teacher[i] = "DefaultTeacher";
+    type[i] = "invis";
+  }
+
+  string year = betterYear(year_m);
+  string path = "Time_Table_2023-24-even_"+course_m+"_"+year+"_"+batch_m;
+  auto data = load_data(path);
+  int slotno = 0;
+  for(const auto& slot : data){
+    roomno[slotno] = slot.room_No;
+    course[slotno] = slot.course_Code;
+    teacher[slotno] = slot.professor;
+    type[slotno] = slot.type;
+    slotno++;
+    // cout<<slot.slot_Num<<"\t"<<slot.course_Code<<endl;
+  }
+
+
     // Get CSS-related data from your backend logic
     double divOpacity = 0.7; // Replace with your actual logic to get the opacity
 
@@ -763,7 +886,11 @@ int student_resp(string roomno[],string course[],string teacher[],string type[])
 //     // Get CSS-related data from your backend logic
 //     double divOpacity = 0.7; // Replace with your actual logic to get the opacity
 
-//     std::string htmlContent = generateHTMLWithCSS();
+//     string roomno[60];
+//     string course[60];
+//     string teacher[60];
+//     string type[60];
+//     std::string htmlContent = generateHTMLWithCSS(roomno,course,teacher,type);
 
 //     std::ofstream outFile("Front End\\rilli_updtae.html");
 //     outFile << htmlContent;

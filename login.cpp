@@ -185,7 +185,6 @@ int log_in() {
           return 1;
         }
       }
-      
     }
     if (success_huh){
       break;
@@ -194,6 +193,7 @@ int log_in() {
   if (!success_huh){
     cout<<"Wrong ID and Password";
   }
+  
 
   return 0;
 }
