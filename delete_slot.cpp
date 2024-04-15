@@ -2,6 +2,7 @@
 // #include <fstream>
 // #include <set>
 // #include "Class.cpp"
+// #include "TT_extract\\betterYear.cpp"
 // #include "file_manipulation\auto_save.cpp"
 // #include "file_manipulation\deserialization.cpp"
 
@@ -9,11 +10,11 @@
 
 using namespace std;
 
-void delete_slot(string batch,int slot_no){
+void delete_slot(string batch,int slot_no,string year,string course){
   
   multiset<Class> loaded_data;
 
-  deserialize(loaded_data,batch);
+  deserialize(loaded_data,batch,year,course);
 
     // Print the loaded data
   for (const auto &slot : loaded_data) {
@@ -28,11 +29,11 @@ void delete_slot(string batch,int slot_no){
     }
   }
 
-auto_save(loaded_data,batch);
+auto_save(loaded_data,batch,year,course);
 
 }
 
 
 // int main(){
-//     delete_slot("B27",1);
+//     delete_slot("B55",1,"1st Year","BTECH");
 // }
