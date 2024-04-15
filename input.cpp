@@ -229,12 +229,15 @@ int mod_input(string r,string cc,string p,string batch,string y,string g,string 
     Batch40.insert_Slot(slot);
 
     // cout<<s<<r<<type;
-    
+    string year_m = "First";
+    string course = "BTECH";
 
-
-    string TimeTableName = batch+".bin";
+    string filename;
+    // string year_m = betterYear(year);
+    string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
+    filename = "Bin\\"+path+".bin";
     //making a bin file and writing in it
-    ofstream out(TimeTableName, ios::binary | ios::app);
+    ofstream out(filename, ios::binary | ios::app);
     if (!out) {
         cerr << "Error opening file. here" << endl;
         return 1;

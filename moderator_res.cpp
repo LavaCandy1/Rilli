@@ -57,14 +57,20 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
     />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
   <body onload="pageLoad() ">
     <style type="text/css"></style>
 
     <div id="mydiv">
-      <div class="conCon">
         <div class="tt">
-          <button class="item-5" id="changeZIndexButton2"></button>
+          <button class="divClose" id="changeZIndexButton2">
+            <i class="material-symbols-outlined">
+              close
+              </i>
+          </button>
+          <!-- <button class="item-5" id="changeZIndexButton2"></button> -->
         </div>
         <form action="/rilli_mod_dev" method="post">
           <div class="tName fle">
@@ -75,9 +81,8 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 id="username"
                 placeholder=""
                 required
-                name="Teacher_Name"
               />
-              <label for="username">Teacher Name</label>
+              <label for="username">Name</label>
             </div>
           </div>
           <div class="sSubject fle">
@@ -88,7 +93,6 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 id="password"
                 placeholder="Subject"
                 required
-                name="course_code"
               />
               <label for="p">Subject</label>
             </div>
@@ -100,9 +104,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 class="input"
                 id="password"
                 placeholder="Subject"
-                name="class_name" 
                 required
-                
               />
               <label for="p">Room Code</label>
             </div>
@@ -150,7 +152,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
             </div>
           </div>
         </form>
-      </div>
+      
     </div>
     <div class="parent">
       <div class="navy">
@@ -179,196 +181,210 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           <label class="rills">RILLI</label>
         </div>
       </div>
-      <!-- side f -->
-      
-        
+      <!-- side  -->
+
       <div class="Todo" id="TD">
-        <form action="/rilli_mod" method="post" class="sideF"><div class="hh opa">
-          <h1><span>Class List</span></h1>
-        </div>
-        <div class="dd opa year">
-          <h2>Year</h2>
-          <div class="center">
-            <div class="container">
-              <div class="setting-description">
-                <div
-                  class="setting-description-text"
-                  style="margin-left: 15px"
-                ></div>
-              </div>
-              <div class="wrapper-dropdown" id="dropdown">
-                <input class="selected-display" id="destination1" name="year" readonly></input>
-                <svg
-                  class="arrow"
-                  id="drp-arrow"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="transition-all ml-auto rotate-180"
-                >
-                  <path
-                    d="M7 14.5l5-5 5 5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <ul class="dropdown">
-                  <li class="item">1st Year</li>
-                  <li class="item">2nd Year</li>
-                  <li class="item">3rd Year</li>
-                  <li class="item">4th Year</li>
-                </ul>
-              </div>
-              <br />
-              <div class="setting-description">
-                <div class="setting-description-text" style="margin-left: 15px">
-                  <h10></h10>
+        <form action="/rilli_mod" method="post" class="sideF">
+          <div class="hh opa">
+            <h1><span>Class List</span></h1>
+          </div>
+          <div class="dd opa year">
+            <h2>Year</h2>
+            <div class="center">
+              <div class="container">
+                <div class="setting-description">
+                  <div
+                    class="setting-description-text"
+                    style="margin-left: 15px"
+                  ></div>
+                </div>
+                <div class="wrapper-dropdown" id="dropdown">
+                  <input class="selected-display" id="destination" name="year" readonly></input>
+                  <svg
+                    class="arrow"
+                    id="drp-arrow"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-all ml-auto rotate-180"
+                  >
+                    <path
+                      d="M7 14.5l5-5 5 5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <ul class="dropdown" >
+                    <li class="item">1st Year</li>
+                    <li class="item">2nd Year</li>
+                    <li class="item">3rd Year</li>
+                    <li class="item">4th Year</li>
+                  </ul>
+                </div>
+                <br />
+                <div class="setting-description">
+                  <div
+                    class="setting-description-text"
+                    style="margin-left: 15px"
+                  >
+                    <h10></h10>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="dd opa group">
-          <h2>Group</h2>
-          <div class="wrapper-dropdown" id="dropdown">
-            <input class="selected-display" id="destination1" name="group" readonly></input>
-            <svg
-              class="arrow"
-              id="drp-arrow"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="transition-all ml-auto rotate-180"
-            >
-              <path
-                d="M7 14.5l5-5 5 5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-            <ul class="dropdown">
-              <li class="item">G4</li>
-              <li class="item">G5</li>
-              <li class="item">G6</li>
-              <li class="item">G7</li>
-            </ul>
+
+          <div class="dd opa group">
+            <h2>Group</h2>
+            <div class="wrapper-dropdown" id="dropdown">
+              <input class="selected-display" id="destination1" name="group" disabled></input>
+              <svg
+                class="arrow"
+                id="drp-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all ml-auto rotate-180"
+              >
+                <path
+                  d="M7 14.5l5-5 5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <ul class="dropdown" name="group">
+                <li class="item">G4</li>
+                <li class="item">G5</li>
+                <li class="item">G6</li>
+                <li class="item">G7</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="dd opa batch">
-          <h2>Batch</h2>
-          <div class="wrapper-dropdown" id="dropdown">
-            <input class="selected-display" id="destination1" name="batch" readonly></input>
-            <svg
-              class="arrow"
-              id="drp-arrow"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="transition-all ml-auto rotate-180"
-            >
-              <path
-                d="M7 14.5l5-5 5 5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-            <ul class="dropdown">
-              <li class="item">b04</li>
-              <li class="item">b40</li>
-              <li class="item">B41</li>
-              <li class="item">B42</li>
-              <li class="item">B43</li>
-            </ul>
+          <div class="dd opa batch">
+            <h2>Batch</h2>
+            <input type="text" class="batchInput" name="batch">
+            <!-- <div class="wrapper-dropdown" id="dropdown">
+              <input class="selected-display" id="destination" name="batch" readonly></input>
+              <svg
+                class="arrow"
+                id="drp-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"s
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all ml-auto rotate-180"
+              >
+                <path
+                  d="M7 14.5l5-5 5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              
+              <ul class="dropdown" name="batch">
+                <li class="item">b04</li>
+                <li class="item">B40</li>
+                <li class="item">B41</li>
+                <li class="item">B42</li>
+                <li class="item">B27</li>
+                <li class="item">B6</li>
+              </input>
+            </div> -->
           </div>
-        </div>
-        <div class="dd opa course">
-          <h2>Course</h2>
-          <div class="wrapper-dropdown" id="dropdown">
-            <input class="selected-display" id="destination1" name="course" readonly></input>
-            <svg
-              class="arrow"
-              id="drp-arrow"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="transition-all ml-auto rotate-180"
-            >
-              <path
-                d="M7 14.5l5-5 5 5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-            <ul class="dropdown">
-              <li class="item">CSE</li>
-              <li class="item">Biotech</li>
-              <li class="item">Mechanical</li>
-              <li class="item">Electrical</li>
-            </ul>
+          <div class="dd opa course">
+            <h2>Course</h2>
+            <div class="wrapper-dropdown" id="dropdown">
+              <input class="selected-display" id="destination" name="course" readonly></input>
+              <svg
+                class="arrow"
+                id="drp-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all ml-auto rotate-180"
+              >
+                <path
+                  d="M7 14.5l5-5 5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <ul class="dropdown" name="course">
+                <li class="item">BTECH</li>
+                <li class="item">Biotech</li>
+                <li class="item">Mechanical</li>
+                <li class="item">Electrical</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="dd opa classT">
-          <h2>Class Type</h2>
-          <div class="wrapper-dropdown" id="dropdown">
-            <input class="selected-display" id="destination" name="type" readonly></input>
-            <svg
-              class="arrow"
-              id="drp-arrow"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="transition-all ml-auto rotate-180"
-            >
-              <path
-                d="M7 14.5l5-5 5 5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-            <ul class="dropdown">
-              <li class="item">Tutorial</li>
-              <li class="item">Lecture</li>
-              <li class="item">Practical</li>
-            </ul>
+          <div class="dd opa classT">
+            <h2>Class Type</h2>
+            <div class="wrapper-dropdown" id="dropdown">
+              <input class="selected-display" id="destination" name="type" readonly></input>
+              <svg
+                class="arrow"
+                id="drp-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all ml-auto rotate-180"
+              >
+                <path
+                  d="M7 14.5l5-5 5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <ul class="dropdown" name="type">
+                <li class="item" name="type">Tutorial</li>
+                <li class="item" name="type">Lecture</li>
+                <li class="item" name="type">Practical</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="opa seadiv"><button type="submit" class="search" required /><i class='bx bx-search-alt-2'></i>
-        </button></div></form>
-        
-        
+          <div class="opa seadiv">
+            <button type="submit" class="search" required>
+              <i class="bx bx-search-alt-2"></i>
+            </button>
+          </div>
+        </form>
       </div>
 
       <div class="Main" id="main">
         <div class="calendar">
           <div class="top">
-            <h3>November 2023 /</h3>
+            <h3 id="currentMonthYear"></h3>
             <div class="Ass">
               <button class="button button--bestia" id="changeZIndexButton">
                 <div class="button__bg"></div>
                 <span>+</span>
               </button>
             </div>
+            <!-- <div class="buttonContainer">
+              <button class="topButtons" id="addSlot">+</button>
+          
+             
+            </div> -->
+
           </div>
 
           <div class="NONE days-1">SUN</div>
@@ -388,7 +404,6 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           <label class="NONE sat dayN"></label>
           <div class="bars">
             <div class="bars2">
-            
               <!--Borders-->
               <div class="bord bord1"></div>
               <div class="bord bord2"></div>
@@ -416,9 +431,11 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
               <div class="time AM7">15:40</div>
               <div class="time AM8">16:40</div>
               <div class="time AM9">17:35</div>
+              
 
               <!-- BOXES -->
               
+
               <div class="SLOT slot1 )"+type[0]+R"(">
                 <form action="/rilliM_del" method="post" class="slotF">
                 <input type ="text" id="slot_no_invis" name="del_slot" value="1"></input>
@@ -959,7 +976,9 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
             <button type="submit" class="CO"><span class="close">+</span></button>
             </form>
           </div>
-              
+                
+                
+              </div>
             </div>
           </div>
         </div>
@@ -1001,6 +1020,17 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
         isDragging = false;
       });
 
+             // Get the current date
+    const currentDate = new Date();
+
+// Get the month and year
+const month = currentDate.toLocaleString('default', { month: 'long' });
+const year = currentDate.getFullYear();
+
+// Display the month and year in the h3 element
+const currentMonthYearElement = document.getElementById('currentMonthYear');
+currentMonthYearElement.textContent = `${month} ${year}`;
+
       // Make the text input editable
       var editableTextBox = document.getElementById("editableTextBox");
       editableTextBox.addEventListener("dblclick", function () {
@@ -1010,6 +1040,8 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
       editableTextBox.addEventListener("blur", function () {
         editableTextBox.setAttribute("readonly", "readonly");
       });
+
+      
 
       //LOLLLLLLLLLLLLLLLLLLLLLLLLLL
 
@@ -1039,13 +1071,18 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
         });
       }
 
+
       updateWeekNumbers();
+
+
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="faltu.js"></script>
     <script src="ghatiya.js"></script>
   </body>
 </html>
+
 
     )";
 

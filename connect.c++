@@ -13,6 +13,7 @@
 #include "coordinate.cpp"
 #include "student_res.cpp"
 #include "moderator_res.cpp"
+#include "Teacher_res.cpp"
 #include "delete_slot.cpp"
 using namespace std;
 
@@ -111,16 +112,16 @@ int main() {
         }
     });
 
-    // svr.Get("/rilli_up", [](const httplib::Request& req, httplib::Response& res) {
-    //     std::ifstream html_file("Front End\\rilliTeacher_update.html");
-    //     if (html_file.is_open()) {
-    //         std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
-    //         res.set_content(html_content, "text/html");
-    //     } else {
-    //         res.status = 404;
-    //         res.set_content("File not found", "text/plain");
-    //     }
-    // });
+    svr.Get("/rilli_Teach_up", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream html_file("Front End\\rilliTeacher_update.html");
+        if (html_file.is_open()) {
+            std::string html_content((std::istreambuf_iterator<char>(html_file)), std::istreambuf_iterator<char>());
+            res.set_content(html_content, "text/html");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
 
 
     svr.Get("/pret.css", [](const httplib::Request& req, httplib::Response& res) {
@@ -549,38 +550,38 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     if(role=="student"){
         // res.set_redirect("/rilli");
         
-        string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
-        string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
+    //     string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
+    //     string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
         
-        // important change 40 to 60 for updated csv extraction thingi 
-        int size = 60;
-        string roomno_stud[size];
-        string course_stud[size];
-        string teacher_stud[size];
-        string type_stud[size];
-        for (int i = 0; i < size; ++i) {
-        roomno_stud[i] = "DefaultRoom";
-        course_stud[i] = "DefaultCourse";
-        teacher_stud[i] = "DefaultTeacher";
-        type_stud[i] = "invis";
-    }
+    //     // important change 40 to 60 for updated csv extraction thingi 
+    //     int size = 60;
+    //     string roomno_stud[size];
+    //     string course_stud[size];
+    //     string teacher_stud[size];
+    //     string type_stud[size];
+    //     for (int i = 0; i < size; ++i) {
+    //     roomno_stud[i] = "DefaultRoom";
+    //     course_stud[i] = "DefaultCourse";
+    //     teacher_stud[i] = "DefaultTeacher";
+    //     type_stud[i] = "invis";
+    // }
 
         
 
-        // 2 list day aur time ki jisse for loop chlega
-        for(const string& day : weekdays){
-            for(const string& time : timeslots){
-                Class slot = search(day,time,batch);
-                int slot_no = getCoordinateNumber(day,time);
-                // cout<<day<<" "<<time<<" "<<slot_no<<endl;
-                roomno_stud[slot_no-1] = slot.room_No;
-                course_stud[slot_no-1] = slot.course_Code;
-                teacher_stud[slot_no-1] = slot.professor;
-                type_stud[slot_no-1] = slot.type;
-            }
-        }
+    //     // 2 list day aur time ki jisse for loop chlega
+    //     for(const string& day : weekdays){
+    //         for(const string& time : timeslots){
+    //             Class slot = search(day,time,batch);
+    //             int slot_no = getCoordinateNumber(day,time);
+    //             // cout<<day<<" "<<time<<" "<<slot_no<<endl;
+    //             roomno_stud[slot_no-1] = slot.room_No;
+    //             course_stud[slot_no-1] = slot.course_Code;
+    //             teacher_stud[slot_no-1] = slot.professor;
+    //             type_stud[slot_no-1] = slot.type;
+    //         }
+    //     }
 
-        student_resp(roomno_stud,course_stud,teacher_stud,type_stud);
+        student_resp(batch,enrollmentID);
 
         res.set_redirect("/rilli_up");
 
@@ -591,7 +592,40 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
         res.set_redirect("/rilli_mod");
     
     } else if(role=="teacher"){
-        res.set_redirect("/rilli_Teacher");
+    //     string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
+    //     string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
+        
+
+    //     int size = 60;
+    //     string roomno_teach[size];
+    //     string course_teach[size];
+    //     string teacher_teach[size];
+    //     string type_teach[size];
+    //     for (int i = 0; i < size; ++i) {
+    //     roomno_teach[i] = "DefaultRoom";
+    //     course_teach[i] = "DefaultCourse";
+    //     teacher_teach[i] = "DefaultTeacher";
+    //     type_teach[i] = "invis";
+    // }
+
+        
+
+    //     // 2 list day aur time ki jisse for loop chlega
+    //     for(const string& day : weekdays){
+    //         for(const string& time : timeslots){
+    //             Class slot = search(day,time,batch);
+    //             int slot_no = getCoordinateNumber(day,time);
+    //             // cout<<day<<" "<<time<<" "<<slot_no<<endl;
+    //             roomno_teach[slot_no-1] = slot.room_No;
+    //             course_teach[slot_no-1] = slot.course_Code;
+    //             teacher_teach[slot_no-1] = slot.professor;
+    //             type_teach[slot_no-1] = slot.type;
+    //         }
+    //     }
+
+        // Teacher_resp(roomno_teach,course_teach,teacher_teach,type_teach);
+        res.set_redirect("/rilli_Teach_up");
+
     } else {
         res.set_redirect("/rilli_Login_err");
     }

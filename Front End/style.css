@@ -57,7 +57,16 @@ body {
   --text2-color: #080a1a;
   --text3-color: #0088b5;
 }
+.GolGol {
+  opacity: 1;
+  margin: 0;
+  transition: transform 15s ease-in-out;
+  user-select: none;
+}
 
+.GolGol:hover {
+  transform: rotate(180000deg);
+}
 .hidden {
   opacity: 0;
   filter: blur(2px);
@@ -201,7 +210,7 @@ body {
 }
 .place2 {
   width: 600px;
-  height: 590px;
+  height: 600px;
   border-radius: 40px;
 }
 #desc .placeR {
@@ -543,7 +552,7 @@ a:link {
   border-top-left-radius: 90px;
   border-top-right-radius: 90px;
   background-color: none;
-  border: var(--seventh-color) solid 5px;
+  /* border: var(--seventh-color) solid 5px; */
   display: flex;
   flex-direction: column;
   justify-content: center;

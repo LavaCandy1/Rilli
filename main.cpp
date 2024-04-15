@@ -1,4 +1,5 @@
 #include <iostream>
+#include "String_compi.cpp"
 // #include "login.cpp"
 #include "signup.cpp"
 // #include "input.cpp"
