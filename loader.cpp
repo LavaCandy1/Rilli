@@ -193,7 +193,7 @@ Class search(string day,string time,string batch){
     cerr << "Error opening file." << endl;
   }
 
-  deserialize(loadedData, in,batch);
+  auto_load(loadedData,batch);
   in.close();
 
   for(const auto& slot : loadedData){
@@ -214,9 +214,14 @@ Class search(string day,string time,string batch){
 
 multiset<Class> load_data(string batch) {
   // cout<<"here lol";
+
+  //Time_Table_2023-24-even_BTECH_Second_B55
+
+
   multiset<Class> loadedData;
   string filename;
-  filename = batch+".bin";
+  // cout<<batch;
+  filename = "Bin\\"+batch+".bin";
 
   ifstream in(filename, ios::binary);
   if (!in) {

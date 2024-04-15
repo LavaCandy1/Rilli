@@ -1,11 +1,14 @@
 
 
 
-void auto_save(multiset<Class> ms,string batch) {
+void auto_save(multiset<Class> ms,string batch,string year,string course) {
 
-  string TimeTableName = "Bin\\"+batch+".bin";
+  string filename;
+  string year_m = betterYear(year);
+  string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
+  filename = "Bin\\"+path+".bin";
     //making a bin file and writing in it
-    ofstream out(TimeTableName, ios::binary);
+    ofstream out(filename, ios::binary);
     if (!out) {
         cerr << "Error opening file." << endl;
         // return 1;

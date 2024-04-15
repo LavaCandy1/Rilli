@@ -8,10 +8,8 @@ using namespace std;
 tuple<string, string, string, string, string> parse_string(const string& input_string) {
     // Define regex pattern to match the components
     regex pattern1(R"((\w+):\s+(\w+);\s+\((\w+)\):\s+(.+?)\s+\{(.+?)\})");
-     regex pattern2(R"((\w+):\s+(\w+);\s+(\w+);\s+\((\w+)\):\s+(.+?)\s+\{(.+?)\})");
-
-
-
+    regex pattern2(R"((\w+):\s+(\w+);\s+(\w+);\s+\((\w+)\):\s+(.+?)\s+\{(.+?)\})");
+    regex pattern3(R"((BTECH|First)_([A-Z]\d+))");
     // Use regex to find matches in the input string
     smatch match;
     if (regex_search(input_string, match, pattern1)) {
@@ -30,7 +28,13 @@ tuple<string, string, string, string, string> parse_string(const string& input_s
         string room = match[6].str();
         
         return make_tuple(course_code, section, designation, instructor, room);
-    } else {
+    } else if (regex_search(input_string, match, pattern3)) {
+        // Extract matched groups
+        string program = match[1].str();
+        string year = match[2].str();
+        string group = match[3].str();
+
+    }else {
         
         return make_tuple(" ", " ", " ", " ", " ");
     }
