@@ -37,7 +37,7 @@
   <body>
     <!-- animation -->
 
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="loader-clip clip-top">
         <div class="marquee">
           <div class="marquee-container">
@@ -73,8 +73,8 @@
           </div>
         </div>
       </div>
-    </div>
-    -->
+    </div> -->
+
     <!-- login and signUp -->
 
     <section>
@@ -171,7 +171,7 @@
     <div id="main">
       <div id="nav" class="stick">
         <div id="left">
-          <img src="./Assets/logo.png" alt="" />
+          <img src="./Assets/logo.png" alt="" class="GolGol" />
         </div>
         <div id="right">
           <button class="btn" id="signup" onclick="changeZIndex(1)">
@@ -211,7 +211,7 @@
 
       <div id="home" class="">
         <div id="base">Rilli</div>
-        <div id="video" class="hidden"></div>
+        <!-- <div id="video" class="hidden"></div> -->
         <div id="desc" class="">
           <div class="liner">
             <div class="placeR hidden">
@@ -256,19 +256,24 @@
             </div>
             <div class="columner right">
               <div class="feat hidden">
-                <div class="placeH"></div>
+                <video autoplay muted loop class="placeH">
+                  <source
+                    src="./Assets/Clips/Feat2.mp4"
+                    type="video/mp4"
+                    class=""
+                  />
+                </video>
                 <h5>Interactive UI</h5>
               </div>
               <div class="feat hidden">
-                <div class="">
-                  <video autoplay muted loop class="place2">
-                    <source
-                      src="./Assets/Clips/Feat1.mp4"
-                      type="video/mp4"
-                      class=""
-                    />
-                  </video>
-                </div>
+                <video autoplay muted loop class="placeH">
+                  <source
+                    src="./Assets/Clips/Feat1.mp4"
+                    type="video/mp4"
+                    class=""
+                  />
+                </video>
+
                 <h5>Todo List</h5>
               </div>
               <div class="feat hidden">
