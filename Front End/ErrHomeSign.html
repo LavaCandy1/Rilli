@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rilli</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet"
@@ -26,8 +26,8 @@
   </head>
   <style>
     #signContainer {
-      z-index: -1;
-      opacity: 0;
+      z-index: 10;
+      opacity: 1;
     }
     #loginContainer {
       z-index: -1;
@@ -36,8 +36,8 @@
   </style>
   <body>
     <!-- animation -->
-    <!-- 
-    <div class="loader">
+
+    <!-- <div class="loader">
       <div class="loader-clip clip-top">
         <div class="marquee">
           <div class="marquee-container">
@@ -84,32 +84,30 @@
               <i class="material-symbols-outlined"> close </i>
             </button>
           </div>
-          <form id="form1" class="forms" action="/rilli_signUp" method="post">
+          <form id="form1" class="forms">
             <div class="heading">
               <h3>Sign in to Rilli</h3>
             </div>
-            <div class="enroll columner">
+            <h3 class="errH3">Incomplete Details</h3>
+            <div class="enroll">
               <h3>Enter your enrollment id</h3>
 
               <div class="spacer"></div>
-              <input
-                type="text"
-                name="enrollment_id"
-                placeholder="Enrollment ID"
-              />
+              <input type="text" />
             </div>
-            <div class="enroll columner">
+            <div class="enroll">
               <h3>Enter your Batch</h3>
+
               <div class="spacer"></div>
               <input type="text" name="batch" placeholder="BXX" />
             </div>
-            <div class="password columner">
+            <div class="password">
               <h3>Password</h3>
               <div class="spacer"></div>
-              <input type="password" name="password" placeholder="Password" />
+              <input type="password" />
             </div>
             <div class="confirm">
-              <button class="submit" type="submit">Sign In</button>
+              <button class="submit">Sign In</button>
             </div>
           </form>
           <div class="liner">
@@ -122,36 +120,27 @@
         </div>
       </div>
     </section>
-    <div class="box" id="loginContainer">
+    <div class="box err" id="loginContainer">
       <div class="myDiv" id="loginForm">
         <div class="tt">
           <button class="divClose" onclick="changeZIndex(4)">
             <i class="material-symbols-outlined"> close </i>
           </button>
         </div>
-        <form id="form2" class="forms" action="/rilli_Login?" method="post">
+        <form id="form2" class="forms">
           <div class="heading">
             <h3>Login to Rilli</h3>
           </div>
+          <h3 class="errH3">Incorrect Password or Enrollment ID</h3>
           <div class="enroll">
             <h3>Enter your enrollment id</h3>
             <div class="spacer"></div>
-            <input
-              type="text"
-              name="enroll"
-              placeholder="Enrollment ID"
-              required
-            />
+            <input type="text" />
           </div>
           <div class="password">
             <h3>Password</h3>
             <div class="spacer"></div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
+            <input type="text" />
           </div>
           <div class="confirm">
             <button class="submit">Login</button>
@@ -213,7 +202,7 @@
         <div id="video" class="hidden"></div>
         <div id="desc" class="hidden">
           <div class="liner">
-            <div class="placeR"><span>R</span></div>
+            <div class="placeH"></div>
             <div class="columner hidden">
               <h1>What are we?</h1>
               <h2>
@@ -339,7 +328,7 @@
             </ul>
           </div>
         </section>
-        <!-- <section id="Us"></section> -->
+        <section id="Us"></section>
         <div id="socials" class="hidden">
           <div id="top">
             <div id="SHeading" class="hidden">
