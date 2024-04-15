@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rilli</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet"
@@ -30,50 +30,50 @@
       opacity: 0;
     }
     #loginContainer {
-      z-index: -1;
-      opacity: 0;
+      z-index: 10;
+      opacity: 1;
     }
   </style>
   <body>
     <!-- animation -->
-    <!-- 
-      <div class="loader">
-        <div class="loader-clip clip-top">
-          <div class="marquee">
-            <div class="marquee-container">
-              <span>Rilli</span>
-              <span>Rilli</span>
-              Rilli
-              <span>Rilli</span>
-              <span>Rilli</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="loader-clip clip-bottom">
-          <div class="marquee">
-            <div class="marquee-container">
-              <span>Rilli</span>
-              <span>Rilli</span>
-              Rilli
-              <span>Rilli</span>
-              <span>Rilli</span>
-            </div>
+    <!-- <div class="loader">
+      <div class="loader-clip clip-top">
+        <div class="marquee">
+          <div class="marquee-container">
+            <span>Rilli</span>
+            <span>Rilli</span>
+            Rilli
+            <span>Rilli</span>
+            <span>Rilli</span>
           </div>
         </div>
+      </div>
 
-        <div class="clip-center">
-          <div class="marquee">
-            <div class="marquee-container">
-              <span>Rilli</span>
-              <span>Rilli</span>
-              Rilli
-              <span>Rilli</span>
-              <span>Rilli</span>
-            </div>
+      <div class="loader-clip clip-bottom">
+        <div class="marquee">
+          <div class="marquee-container">
+            <span>Rilli</span>
+            <span>Rilli</span>
+            Rilli
+            <span>Rilli</span>
+            <span>Rilli</span>
           </div>
         </div>
-      </div> -->
+      </div>
+
+      <div class="clip-center">
+        <div class="marquee">
+          <div class="marquee-container">
+            <span>Rilli</span>
+            <span>Rilli</span>
+            Rilli
+            <span>Rilli</span>
+            <span>Rilli</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <!-- login and signUp -->
 
     <section>
@@ -84,32 +84,29 @@
               <i class="material-symbols-outlined"> close </i>
             </button>
           </div>
-          <form id="form1" class="forms" action="/rilli_signUp" method="post">
+          <form id="form1" class="forms">
             <div class="heading">
               <h3>Sign in to Rilli</h3>
             </div>
-            <div class="enroll columner">
+            <div class="enroll">
               <h3>Enter your enrollment id</h3>
 
               <div class="spacer"></div>
-              <input
-                type="text"
-                name="enrollment_id"
-                placeholder="Enrollment ID"
-              />
+              <input type="text" />
             </div>
-            <div class="enroll columner">
+            <div class="enroll">
               <h3>Enter your Batch</h3>
+
               <div class="spacer"></div>
               <input type="text" name="batch" placeholder="BXX" />
             </div>
-            <div class="password columner">
+            <div class="password">
               <h3>Password</h3>
               <div class="spacer"></div>
-              <input type="password" name="password" placeholder="Password" />
+              <input type="password" />
             </div>
             <div class="confirm">
-              <button class="submit" type="submit">Sign In</button>
+              <button class="submit">Sign In</button>
             </div>
           </form>
           <div class="liner">
@@ -122,36 +119,27 @@
         </div>
       </div>
     </section>
-    <div class="box" id="loginContainer">
+    <div class="box err" id="loginContainer">
       <div class="myDiv" id="loginForm">
         <div class="tt">
           <button class="divClose" onclick="changeZIndex(4)">
             <i class="material-symbols-outlined"> close </i>
           </button>
         </div>
-        <form id="form2" class="forms" action="/rilli_Login?" method="post">
+        <form id="form2" class="forms">
           <div class="heading">
             <h3>Login to Rilli</h3>
           </div>
+          <h3 class="errH3">Incorrect Password or Enrollment ID</h3>
           <div class="enroll">
             <h3>Enter your enrollment id</h3>
             <div class="spacer"></div>
-            <input
-              type="text"
-              name="enroll"
-              placeholder="Enrollment ID"
-              required
-            />
+            <input type="text" />
           </div>
           <div class="password">
             <h3>Password</h3>
             <div class="spacer"></div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
+            <input type="text" />
           </div>
           <div class="confirm">
             <button class="submit">Login</button>
@@ -211,21 +199,15 @@
       <div id="home" class="">
         <div id="base">Rilli</div>
         <div id="video" class="hidden"></div>
-        <div id="desc" class="">
+        <div id="desc" class="hidden">
           <div class="liner">
-            <div class="placeR hidden">
-              <video autoplay muted loop class="sp" id="vid2">
-                <source src="./Assets/R.mp4" type="video/mp4" class="" />
-              </video>
-            </div>
-
+            <div class="placeH"></div>
             <div class="columner hidden">
               <h1>What are we?</h1>
               <h2>
-                Rilli has 3 webpages, moderator, student, and login/signup page.
-                People who login as moderator can make timeslots for the
-                students using a form to store the data which is then used and
-                read when you open the students webpage.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+                provident hic minima sequi et. Officiis, ratione corrupti natus
+                quas dolor et cum, itaque quis ipsa nam est porro sunt quaerat!
               </h2>
             </div>
           </div>
@@ -241,30 +223,30 @@
             <div class="columner left">
               <div class="one hidden">
                 <div class="placeH"></div>
-                <h5>Add/Delete slots</h5>
+                <h5>Feat 1</h5>
               </div>
 
               <div class="one hidden">
                 <div class="placeH"></div>
-                <h5>Real-time Updation</h5>
+                <h5>Feat 1</h5>
               </div>
               <div class="one hidden">
                 <div class="placeH"></div>
-                <h5>HTM to Rilli</h5>
+                <h5>Feat 1</h5>
               </div>
             </div>
             <div class="columner right">
               <div class="feat hidden">
                 <div class="placeH"></div>
-                <h5>Interactive UI</h5>
+                <h5>Feat 1</h5>
               </div>
               <div class="feat hidden">
                 <div class="placeH"></div>
-                <h5>Todo List</h5>
+                <h5>Feat 2</h5>
               </div>
               <div class="feat hidden">
                 <div class="placeH"></div>
-                <h5>Slot finder</h5>
+                <h5>Feat 3</h5>
               </div>
             </div>
           </div>
@@ -345,7 +327,7 @@
             </ul>
           </div>
         </section>
-        <!-- <section id="Us"></section> -->
+        <section id="Us"></section>
         <div id="socials" class="hidden">
           <div id="top">
             <div id="SHeading" class="hidden">
