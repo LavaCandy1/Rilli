@@ -72,7 +72,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
           </button>
           <!-- <button class="item-5" id="changeZIndexButton2"></button> -->
         </div>
-        <form action="">
+        <form action="/rilli_mod_dev" method="post">
           <div class="tName fle">
             <div class="input-box">
               <input
