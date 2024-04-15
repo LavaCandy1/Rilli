@@ -1630,7 +1630,7 @@ form {
   min-width: 231.5px;
   width: 90%;
   max-width: 200px;
-  padding: 13px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   min-height: 30px;
   border-radius: 15px 15px 15px 15px;
   background: #5b4d5f;
@@ -1663,9 +1663,11 @@ form {
   background-color: transparent;
   color: #fff;
   margin-left: 20px;
+  width: 65%;
   cursor: not-allowed;
   pointer-events: none;
   border: none;
+  font-size: 15px;
 }
 #myDiv .selected-display::after {
   border: none;
@@ -1747,7 +1749,6 @@ form {
 
   border-radius: 15px;
 }
-
 .batchInput:focus {
   outline: none;
 }
@@ -1958,6 +1959,7 @@ form {
   margin-left: 20px;
   cursor: not-allowed;
   pointer-events: none;
+  font-size: 17px;
   border: none;
 }
 .selected-display::after {
@@ -2049,10 +2051,10 @@ svg {
   border: none;
   font-family: "Rubik", sans-serif;
   background-color: #1c2028;
-  color: #d4a67d;
+  color: #fff;
   font-weight: 450;
   padding-left: 20px;
-  font-size: 16px;
+  font-size: 17px;
   padding-top: 30px;
   padding-bottom: 30px;
   border: #494c52 1px solid;
