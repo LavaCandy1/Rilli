@@ -7,7 +7,7 @@ using namespace std;
 string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[],string type[]) {
     string h = "hallo";
     string htmlContent = R"(
-        <html>
+       <html>
   <head>
     <link rel="stylesheet" href="pret.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -136,7 +136,7 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
     <style type="text/css"></style>
     <div class="parent">
       <div class="navy">
-        <div class="logo">
+        <div class="logo" id="sid">
           <img
             class="GolGol"
             src="images/logo.png"
@@ -148,8 +148,8 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
           <label class="DAY" id="current-day"></label
           ><label class="NO" id="current-date"></label>
         </div>
-        <div class="log3">
-          <i class="bx bx-sun bx-md" style="color: #c8a366"></i>
+        <div class="log3" id="Theme">
+          <i class="bx bx-sun bx-md" style="color: #282729"></i>
         </div>
         <div class="log4" onclick="window.close() ">
           <i class="bx bx-log-out bx-md"></i>
@@ -161,14 +161,21 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
           <label class="rills">RILLI</label>
         </div>
       </div>
-      <div class="Todo">
-        <h1>Todo List</h1>
-        <div class="button_minus" onclick="removeLastExpandableDiv() "></div>
-        <div class="button_plus" onclick="createExpandableDiv()  "></div>
-        <div id="expandable-container"></div>
+      <div class="Todo" id="TD">
+        <h1 id="sid" class="opa">Todo List</h1>
+        <div
+          class="button_minus opa"
+          onclick="removeLastExpandableDiv() "
+          id=""
+        ></div>
+        <div class="button_plus opa" onclick="createExpandableDiv() "></div>
+        <div id="expandable-container" class="opa">
+          <!-- Existing expandable divs or new ones will be added here -->
+        </div>
       </div>
 
-      <div class="Main">
+
+      <div class="Main" id="main">
         <div class="calendar">
           <div class="top">
             <h3 id="currentMonthYear"></h3>
@@ -228,7 +235,7 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
               <div class="time AM9">17:35</div>
 
               <!-- BOXES -->
-                          <div class="SLOT slot1 )"+type[0]+R"(">
+                       <div class="SLOT slot1 )"+type[0]+R"(">
                 <form action="" class="slotF">
                   
                   <span>)"+course_Code[0]+R"(</span>
@@ -782,6 +789,11 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
         displayDate();
         updateWeekNumbers();
       }
+      function themeF() {}
+      const Theme = document.getElementById("Theme");
+      Theme.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
 
       var draggableDiv = document.getElementById("mydiv");
       var isDragging = false;
@@ -869,17 +881,39 @@ string generateHTMLWithCSS(string roomno[],string course_Code[],string teacher[]
             currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
         });
       }
+      function toggleFunction() {
+        let isToggled = false;
+        const opaElements = document.querySelectorAll(".opa");
+        const sid = document.getElementById("sid");
+        const TD = document.getElementById("TD");
+        const main = document.getElementById("main");
+        return function () {
+          isToggled = !isToggled;
+          if (isToggled) {
+            TD.style.width = "450px";
+            main.style.marginLeft = "450px";
+            opaElements.forEach((element) => {
+              element.style.transitionDuration = "0.3s";
+            });
+            setTimeout(function () {
+              opaElements.forEach((element) => {
+                element.style.opacity = 1;
+              });
+            }, 600);
+          } else {
+            TD.style.width = "0";
+            main.style.marginLeft = "0";
+            opaElements.forEach((element) => {
+              element.style.opacity = "0";
+              element.style.transitionDuration = "0.3s";
+            });
+          }
+        };
+      }
+      const toggleButton = document.getElementById("sid");
+      toggleButton.addEventListener("click", toggleFunction());
 
       // Add event listeners to the Next and Previous Week buttons
-      document
-        .getElementById("nextWeek")
-        .addEventListener("click", showNextWeek);
-      document
-        .getElementById("prevWeek")
-        .addEventListener("click", showPreviousWeek);
-
-      // Initial call to display the current week's day numbers
-      updateWeekNumbers();
       
     </script>
     <script>
@@ -951,10 +985,12 @@ function handleDropdown(dropdown, arrow, open) {
   }
 }
       </script>
+      <script src="ghatiya.js"></script>
     <script src="faltu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
+
 
     )";
 
@@ -974,16 +1010,16 @@ int Teacher_resp(string roomno[],string course[],string teacher[],string type[])
 }
 
 
-int main() {
-    // Replace with your actual logic to get the opacity
-    string roomno[60];
-    string course[60];
-    string teacher[60];
-    string type[60];
-    std::string htmlContent = generateHTMLWithCSS(roomno,course,teacher,type);
+// int main() {
+//     // Replace with your actual logic to get the opacity
+//     string roomno[60];
+//     string course[60];
+//     string teacher[60];
+//     string type[60];
+//     std::string htmlContent = generateHTMLWithCSS(roomno,course,teacher,type);
 
-    std::ofstream outFile("Front End\\rilliTeacher_updtae.html");
-    outFile << htmlContent;
+//     std::ofstream outFile("Front End\\rilliTeacher_updtae.html");
+//     outFile << htmlContent;
 
-    return 0;
-}
+//     return 0;
+// }

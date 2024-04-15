@@ -295,6 +295,67 @@ int main() {
     });
 
 
+    // fonts
+
+   svr.Get("/Assets/Fonts/Mori/PPMori-SemiBold.otf", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream font_file("Front End\\Assets\\Fonts\\Mori\\PPMori-SemiBold.otf", std::ios::binary);
+    if (font_file.is_open()) {
+        std::string font_content((std::istreambuf_iterator<char>(font_file)), std::istreambuf_iterator<char>());
+        res.set_content(font_content, "font/otf"); // Correct content type for font file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+    });
+
+    svr.Get("/Assets/Fonts/CanopeeRegular.otf", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream font_file("Front End\\Assets\\Fonts\\CanopeeRegular.otf", std::ios::binary);
+    if (font_file.is_open()) {
+        std::string font_content((std::istreambuf_iterator<char>(font_file)), std::istreambuf_iterator<char>());
+        res.set_content(font_content, "font/otf"); // Correct content type for font file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+svr.Get("/Assets/Fonts/TombstoneBlues.otf", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream font_file("Front End\\Assets\\Fonts\\TombstoneBlues.otf", std::ios::binary);
+    if (font_file.is_open()) {
+        std::string font_content((std::istreambuf_iterator<char>(font_file)), std::istreambuf_iterator<char>());
+        res.set_content(font_content, "font/otf"); // Correct content type for font file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+// videos
+
+svr.Get("/Assets/Clips/Feat1.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\Clips\\Feat1.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+svr.Get("/Assets/R.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\R.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+
+
     
 //------------------------------------SignUp------------------------------------------------------------
 
@@ -481,12 +542,9 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
     cout << enrollmentID<<" "<< password;
 
-    string role = login_fx(enrollmentID,password); // returns role
-    string batch = login_batch(enrollmentID,password); // returns batch (All for mod and techers)
-
-
+    string role = login_fx(enrollmentID,password);
+    string batch = login_batch(enrollmentID,password);
     cout<<"\n"<<role;
-
 
     if(role=="student"){
         // res.set_redirect("/rilli");
