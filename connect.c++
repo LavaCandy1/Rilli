@@ -3,6 +3,7 @@
 #include <fstream>  
 #include "cpp-httplib\\httplib.h"
 #include "String_compi.cpp"
+#include "TT_extract\\betterYear.cpp"
 #include "Class.cpp"
 #include "file_manipulation\auto_save.cpp"
 #include "file_manipulation\deserialization.cpp"
@@ -429,8 +430,8 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     svr.Post("/rilliM_del", [&](const httplib::Request& req, httplib::Response& res) {
        string slot_no = req.get_param_value("del_slot");
        cout<<"- "<<slot_no<<" -";
-    delete_slot(batch_m,stoi(slot_no));
-    mod_res_str(batch_m);
+    delete_slot(batch_m,stoi(slot_no),year_m,course_m);
+    mod_res_str(batch_m,year_m,course_m);
 
     res.set_redirect("/rilliM_up");
     });
