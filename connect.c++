@@ -589,6 +589,9 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
         
     } else if(role=="admin"){
         res.set_redirect("/rilli_mod");
+    
+    } else if(role=="teacher"){
+        res.set_redirect("/rilli_Teacher");
     } else {
         res.set_redirect("/rilli_Login_err");
     }

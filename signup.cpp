@@ -33,7 +33,7 @@ person take_Input() {
     cin >> p;
     cout << "Enter batch : ";
     cin >> batch;
-
+    cout<<"\n--"<<i<<"--\n";
 
     hash<string> hasher;
     auto hashCode = hasher(p);
