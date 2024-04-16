@@ -480,7 +480,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
     
-    mod_res_str(batch_m);
+    // mod_res_str(batch_m,year_m,course_m);
     res.set_redirect("/rilliM_up");
 
     });
