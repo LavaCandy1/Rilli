@@ -7,10 +7,10 @@
 #include "Class.cpp"
 #include "file_manipulation\auto_save.cpp"
 #include "file_manipulation\deserialization.cpp"
+#include "coordinate.cpp"
 #include "signup.cpp"
 #include "input.cpp"
 #include "loader.cpp"
-#include "coordinate.cpp"
 #include "student_res.cpp"
 #include "moderator_res.cpp"
 #include "Teacher_res.cpp"
@@ -480,7 +480,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
     
-    mod_res_str(batch_m);
+    // mod_res_str(batch_m,year_m,course_m);
     res.set_redirect("/rilliM_up");
 
     });

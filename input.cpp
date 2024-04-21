@@ -223,9 +223,11 @@ int input(string batch){
 int mod_input(string r,string cc,string p,string batch,string y,string g,string t,string d,string type){
 
     // naam shi krle mere plzzzz abrv wale
-    int s = 1; // plz isk liye pre exist id wala code bnalio ghade 
+    // int s = 1; // plz isk liye pre exist id wala code bnalio ghade 
+    
     time_Table Batch40;
-    auto slot = give_Input(s,r,cc,p,batch,y,g,t,d,type);
+    int slot_no = getCoordinateNumber(d,t);
+    auto slot = give_Input(slot_no,r,cc,p,batch,y,g,t,d,type);
     Batch40.insert_Slot(slot);
 
     // cout<<s<<r<<type;
