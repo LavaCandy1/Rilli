@@ -1658,7 +1658,9 @@ form {
   rotate: 180deg;
   height: 17px;
 }
-
+.selected-display:focus {
+  outline: none;
+}
 #myDiv .selected-display {
   background-color: transparent;
   color: #fff;
