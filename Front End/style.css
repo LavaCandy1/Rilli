@@ -7,6 +7,8 @@
 html {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+
+  scroll-behavior: smooth;
 }
 
 * {
@@ -122,29 +124,46 @@ body {
   color: var(--seventh-color);
 }
 
+#base .liner h5 {
+  font-size: 30px;
+  font-family: "canopee";
+  padding: 10px 0px;
+}
 #base {
-  margin-top: 70px;
-  margin-bottom: auto;
-
+  margin-top: 339px;
+  margin-bottom: 80px;
+  align-items: center;
   transition: 0.4s;
   text-align: center;
 }
-
 #base h1 {
   font-family: "Poppins", sans-serif;
 }
+
+#base h4 {
+  font-family: "canopee";
+  font-size: 50px;
+}
+
 #base .liner {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  margin: auto;
+  margin-top: 40px;
+  justify-content: space-around;
+  width: 40%;
 }
 #home #video {
   border-top-left-radius: 90px;
   border-top-right-radius: 90px;
-  min-height: 130vh;
-  padding: 10vw 15vw;
+  min-height: 100vh;
   background-color: transparent;
-  border: #c9c6cb solid 1px;
+  /* border: #c9c6cb solid 1px; */
+}
+
+#video video {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .btn {

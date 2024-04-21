@@ -37,7 +37,7 @@
   <body>
     <!-- animation -->
 
-    <!-- <div class="loader">
+    <div class="loader">
       <div class="loader-clip clip-top">
         <div class="marquee">
           <div class="marquee-container">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- login and signUp -->
 
@@ -182,37 +182,50 @@
           </button>
         </div>
       </div>
-      <div id="moving-text">
-        <div class="con">
-          <h1>TIMETABLE</h1>
-          <div id="gola"></div>
-          <h1>MANAGEMENT</h1>
-          <div id="gola"></div>
-          <h1>SYSTEM</h1>
-          <div id="gola"></div>
-        </div>
-        <div class="con">
-          <h1>TIMETABLE</h1>
-          <div id="gola"></div>
-          <h1>MANAGEMENT</h1>
-          <div id="gola"></div>
-          <h1>SYSTEM</h1>
-          <div id="gola"></div>
-        </div>
-        <div class="con">
-          <h1>TIMETABLE</h1>
-          <div id="gola"></div>
-          <h1>MANAGEMENT</h1>
-          <div id="gola"></div>
-          <h1>SYSTEM</h1>
-          <div id="gola"></div>
-        </div>
-      </div>
+      <!-- <div id="moving-text">
+          <div class="con">
+            <h1>TIMETABLE</h1>
+            <div id="gola"></div>
+            <h1>MANAGEMENT</h1>
+            <div id="gola"></div>
+            <h1>SYSTEM</h1>
+            <div id="gola"></div>
+          </div>
+          <div class="con">
+            <h1>TIMETABLE</h1>
+            <div id="gola"></div>
+            <h1>MANAGEMENT</h1>
+            <div id="gola"></div>
+            <h1>SYSTEM</h1>
+            <div id="gola"></div>
+          </div>
+          <div class="con">
+            <h1>TIMETABLE</h1>
+            <div id="gola"></div>
+            <h1>MANAGEMENT</h1>
+            <div id="gola"></div>
+            <h1>SYSTEM</h1>
+            <div id="gola"></div>
+          </div>
+        </div> -->
 
       <div id="home" class="">
-        <div id="base"><span>RILLI</span></div>
-        <!-- <div id="video" class="hidden"></div> -->
-        <div id="desc" class="">
+        <div id="base">
+          <span>RILLI</span>
+          <div class="liner">
+            <h5>Timetable</h5>
+            <h4>/</h4>
+            <h5>Management</h5>
+            <h4>/</h4>
+            <h5>System</h5>
+          </div>
+        </div>
+        <div id="video">
+          <video autoplay muted loop>
+            <source src="./Assets/Clips/Test3.mp4" type="video/mp4" class="" />
+          </video>
+        </div>
+        <div id="desc">
           <div class="liner">
             <div class="placeR hidden">
               <video autoplay muted loop class="sp" id="vid2">
@@ -400,7 +413,12 @@
 
     <!-- Scroll Trigger is needed for Scroll Effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
       function changeZIndex(boxNumber) {
         var box1 = document.getElementById("signContainer");
