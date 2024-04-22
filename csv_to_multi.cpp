@@ -7,6 +7,7 @@
 #include <filesystem>
 #include "TT_extract\attri_division.cpp"
 #include "Class.cpp"
+#include "TT_extract\betterYear.cpp"
 #include "coordinate.cpp"
 #include "file_manipulation\auto_save.cpp"
 
@@ -25,9 +26,9 @@ string get_full(string str){
     }
 }
 
-string year = "1nd Year";
+string year = "1st Year";
 string group = "G1"; //make a code to find group from batch or vise versa
-string batch = "B6";
+string batch = "Batch";
 
 void insert_TimeTable(multiset<Class> TimeTable,string cell){
     auto result = parse_string(cell);
@@ -204,7 +205,9 @@ int main() {
         }
 
         // Save TimeTable to .bin file
-        auto_save(TimeTable,batch);
+        string course = "BTECH";
+        string year_m = "First";
+        auto_save_2multi(TimeTable,batch);
     }
 
     cout << "Conversion and saving to .bin files completed successfully." << endl;

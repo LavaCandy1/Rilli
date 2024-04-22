@@ -17,8 +17,9 @@ void deserialize(multiset<Class> &m, string batch,string year,string course) {
 
   ifstream in(filename, ios::binary);
   if (!in) {
+    cout<<filename;
     cerr << "Error opening file. while deserializing" << endl;
-    exit(0);
+    // exit(0);
   }
 
   while (true) {

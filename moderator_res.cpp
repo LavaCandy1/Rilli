@@ -1151,7 +1151,7 @@ void mod_res_str(string batch_m){
 void mod_res_str(string batch_m, string year_m, string course){
   string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
   string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
-  int sizeee = 60;
+  int sizeee = 70;
   string roomno_mod[sizeee];
   string course_mod[sizeee];
   string teacher_mod[sizeee];
@@ -1178,8 +1178,11 @@ void mod_res_str(string batch_m, string year_m, string course){
   // string batch = get<2>(settings);
   string year = betterYear(year_m);
   string path = "Time_Table_2023-24-even_"+course+"_"+year+"_"+batch_m;
+  cout<<"\nloading data from bin file";
   auto data = load_data(path);
+  cout<<"\nloaded";
   int slotno = 0;
+  cout<<"\ngoing to add things into arrays";
   for(const auto& slot : data){
     roomno_mod[slotno] = slot.room_No;
     course_mod[slotno] = slot.course_Code;

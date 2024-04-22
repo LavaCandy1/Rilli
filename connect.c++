@@ -487,11 +487,13 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     string time = req.get_param_value("time1");
     string course_Code = req.get_param_value("course_code");
     string day = req.get_param_value("day");
+    cout<<"--"<<room_No<<"--"<<professor<<"--"<<class_type_m<<"--"<<time<<"--"<<day<<"--"<<course_Code;
 
-
+    cout<<"\niinputing into mod_res";
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
-    
-    // mod_res_str(batch_m,year_m,course_m);
+    cout<<"\nrestarting mod_res page";
+
+    mod_res_str(batch_m,year_m,course_m);
     res.set_redirect("/rilliM_up");
 
     });

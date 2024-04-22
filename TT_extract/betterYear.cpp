@@ -7,6 +7,14 @@ string betterYear(const string& year) {
         return "Third";
     else if (year == "4th Year")
         return "Fourth";
+    else if (year == "First")
+        return "First";
+    else if (year == "Second")
+        return "Second";
+    else if (year == "Third")
+        return "Third";
+    else if (year == "Fourth")
+        return "Fourth";
     else
         return " "; // Invalid year
 }
