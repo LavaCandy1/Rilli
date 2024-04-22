@@ -85,3 +85,14 @@ function updateInputValue(inputElement) {
     }
   }
 }
+
+function filterDivs(className) {
+  var divs = document.querySelectorAll(".Tutorial, .Lecture, .Practical");
+  for (var i = 0; i < divs.length; i++) {
+    if (className === "" || divs[i].classList.contains(className)) {
+      divs[i].style.display = "block";
+    } else {
+      divs[i].style.display = "none";
+    }
+  }
+}

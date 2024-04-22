@@ -358,6 +358,12 @@
         <div class="calendar">
           <div class="top">
             <h3 id="currentMonthYear"></h3>
+            <select id="filterDropdown" onchange="filterDivs(this.value)">
+              <option value="">Select Filter</option>
+              <option value="Tutorial">Tutorials</option>
+              <option value="Lecture">Lectures</option>
+              <option value="Practical">Practicals</option>
+            </select>
             <div class="Ass">
               <button class="button button--bestia" id="changeZIndexButton">
                 <div class="button__bg"></div>
