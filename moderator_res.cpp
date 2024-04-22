@@ -81,8 +81,9 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 id="username"
                 placeholder=""
                 required
+                name = "Teacher_Name"
               />
-              <label for="username">Name</label>
+              <label for="username">Teacher Name</label>
             </div>
           </div>
           <div class="sSubject fle">
@@ -93,8 +94,9 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 id="password"
                 placeholder="Subject"
                 required
+                name = "course_code"
               />
-              <label for="p">Subject</label>
+              <label for="p">Course Code</label>
             </div>
           </div>
           <div class="roomC fle">
@@ -105,6 +107,7 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
                 id="password"
                 placeholder="Subject"
                 required
+                name = "room_no"
               />
               <label for="p">Room Code</label>
             </div>
