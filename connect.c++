@@ -74,7 +74,7 @@ int main() {
         }
     });
 
-    // images************************
+    // images************************   
 
     svr.Get("/images/logo.png", [](const httplib::Request& req, httplib::Response& res) {
         std::ifstream img_file("Front End\\images\\logo.png", std::ios::binary);
