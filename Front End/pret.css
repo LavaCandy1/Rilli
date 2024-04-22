@@ -53,6 +53,7 @@ body {
   grid-row-start: 1;
   grid-row-end: 6;
   background-color: #970d1c;
+ 
   display: inline-block;
   user-select: none;
 }

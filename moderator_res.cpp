@@ -376,6 +376,14 @@ string generateHTMLWithCSS_mod(string roomno[],string course_Code[],string teach
         <div class="calendar">
           <div class="top">
             <h3 id="currentMonthYear"></h3>
+             <select id="filterDropdown"  class="f dropdown "onchange="filterDivs(this.value) ">
+
+              <option value="" class="item">Select Filter</option>
+              <option value="Tutorial" class="item">Tutorials</option>
+              <option value="Lecture" class="item">Lectures</option>
+              <option value="Practical" class="item">Practicals</option>
+            </select>
+            
             <div class="Ass">
               <button class="button button--bestia" id="changeZIndexButton">
                 <div class="button__bg"></div>

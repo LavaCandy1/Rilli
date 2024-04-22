@@ -1643,6 +1643,29 @@ form {
   user-select: none;
   font-family: Arial;
 }
+.f {
+  position: absolute;
+  display: inline-block;
+  min-width: 120px;
+  width: 90%;
+  max-width: 200px;
+  padding: 10px 0px 0px 0px;
+  min-height: 47px;
+  border-radius: 12px 12px 12px 12px;
+  background: #494849;
+  text-align: left;
+  color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Arial;
+  width: 50px;
+
+  top: 20px;
+  right: 150px;
+}
 
 #myDiv .scrollable-menu {
   height: auto;

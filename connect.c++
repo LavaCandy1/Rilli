@@ -74,7 +74,7 @@ int main() {
         }
     });
 
-    // images************************
+    // images************************   
 
     svr.Get("/images/logo.png", [](const httplib::Request& req, httplib::Response& res) {
         std::ifstream img_file("Front End\\images\\logo.png", std::ios::binary);
@@ -346,6 +346,39 @@ svr.Get("/Assets/Clips/Feat1.mp4", [](const httplib::Request& req, httplib::Resp
 
 svr.Get("/Assets/Clips/Feat2.mp4", [](const httplib::Request& req, httplib::Response& res) {
     std::ifstream video_file("Front End\\Assets\\Clips\\Feat2.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+svr.Get("/Assets/Clips/Feat3.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\Clips\\Feat3.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+svr.Get("/Assets/Clips/Feat6.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\Clips\\Feat6.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+svr.Get("/Assets/Clips/Test3.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\Clips\\Test3.mp4", std::ios::binary);
     if (video_file.is_open()) {
         std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
         res.set_content(video_content, "video/mp4"); // Correct content type for video file
