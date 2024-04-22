@@ -22,7 +22,6 @@
     />
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   </head>
   <style>
     #signContainer {
@@ -169,19 +168,6 @@
     </div>
 
     <div id="main">
-      <div id="nav" class="stick">
-        <div id="left">
-          <img src="./Assets/logo.png" alt="" class="GolGol" />
-        </div>
-        <div id="right">
-          <button class="btn" id="signup" onclick="changeZIndex(1)">
-            Sign up
-          </button>
-          <button class="btn" id="login" onclick="changeZIndex(2)">
-            Login
-          </button>
-        </div>
-      </div>
       <!-- <div id="moving-text">
           <div class="con">
             <h1>TIMETABLE</h1>
@@ -210,45 +196,77 @@
         </div> -->
 
       <div id="home" class="">
+        <div id="nav" class="stick">
+          <div id="left">
+            <img src="./Assets/logo.png" alt="" class="GolGol" />
+          </div>
+          <div id="right">
+            <button class="btn" id="signup" onclick="changeZIndex(1)">
+              Sign up
+            </button>
+            <button class="btn" id="login" onclick="changeZIndex(2)">
+              Login
+            </button>
+          </div>
+        </div>
         <div id="base">
-          <span>RILLI</span>
-          <div class="liner">
+          <span class="LG">RILLI</span>
+          <!-- <div class="liner">
             <h5>Timetable</h5>
             <h4>/</h4>
             <h5>Management</h5>
             <h4>/</h4>
             <h5>System</h5>
-          </div>
+          </div> -->
         </div>
-        <div id="video">
+        <div id="video" class="contentVid">
           <video autoplay muted loop>
-            <source src="./Assets/Clips/Test3.mp4" type="video/mp4" class="" />
+            <source src="./Assets/Clips/Main.mp4" type="video/mp4" class="" />
           </video>
         </div>
         <div id="desc">
           <div class="liner">
-            <div class="placeR hidden">
+            <div class="placeR">
               <video autoplay muted loop class="sp" id="vid2">
                 <source src="./Assets/R.mp4" type="video/mp4" class="" />
               </video>
             </div>
 
-            <div class="columner hidden">
-              <h1>What are we?</h1>
-              <h2>
-                Rilli: An bespoke academic timetable system for universities.
-                Customizable, supported for seamless scheduling excellence, and
-                safeguarding academic integrity. Tailored solutions for
-                educational institutions' unique needs.
-              </h2>
+            <div class="columner">
+              <h1 id="myGSAP1" class="myGSAP">What are we?</h1>
+              <div class="grp">
+                <h2 class="myGSAP">
+                  <div class="Anim">
+                    Rilli: An bespoke academic timetable system for
+                  </div>
+                </h2>
+                <h2 class="myGSAP">
+                  <div class="Anim">
+                    universities. Customizable, supported for seamless
+                  </div>
+                </h2>
+                <h2 class="myGSAP">
+                  <div class="Anim">
+                    scheduling excellence, and safeguarding academic
+                  </div>
+                </h2>
+                <h2 class="myGSAP">
+                  <div class="Anim">
+                    integrity. Tailored solutions for educational
+                  </div>
+                </h2>
+                <h2 class="myGSAP">
+                  <div class="Anim">institutions' unique needs.</div>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
         <div id="FeatR">
           <div id="top">
-            <div id="SHeading" class="hidden">
+            <div id="SHeading" class="">
               <h1>Rilli</h1>
-              <h1>Features</h1>
+              <h1 class="myGSAP">Features</h1>
             </div>
           </div>
           <div class="liner">
@@ -395,30 +413,30 @@
           <div id="bot" class="hidden">
             <div class="container">
               <h1 class="text">
-                GITHUB<span><a href="" target="_blank">SOURCE?</a></span>
+                GITHUB<span
+                  ><a href="https://github.com/LavaCandy1/Rilli" target="_blank"
+                    >LavaCandy1</a
+                  ></span
+                >
               </h1>
               <h1 class="text">
-                LINKEDLN<span><a href="" target="_blank">SOURCE?</a></span>
+                LINKEDLN<span><a href="" target="_blank">Anjali Ojha</a></span>
               </h1>
               <h1 class="text">
-                YOUTUBE<span><a href="" target="_blank">SOURCE?</a></span>
+                YOUTUBE<span><a href="" target="_blank">Sherzybath</a></span>
               </h1>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://unpkg.com/lenis@1.0.44/dist/lenis.min.js"></script> -->
+    <script src="https://unpkg.com/split-type"></script>
     <script src="Formatting.js"></script>
 
-    <!-- Scroll Trigger is needed for Scroll Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script>
       function changeZIndex(boxNumber) {
         var box1 = document.getElementById("signContainer");
@@ -448,61 +466,6 @@
           box2.style.opacity = 0;
         }
       }
-
-      gsap.from(".clip-top, .clip-bottom", 2, {
-        delaY: 1,
-        height: "50vh",
-        ease: "power4.inOut",
-      });
-
-      gsap.to(".marquee", 3.5, {
-        delay: 0.75,
-        top: "50%",
-        ease: "power4.inOut",
-      });
-      gsap.from(".clip-top .marquee .clip-bottom .marquee", 5, {
-        delay: 1,
-        left: "100%",
-        ease: "power3.inOut",
-      });
-
-      gsap.from(".clip-center .marquee ", 5, {
-        delay: 1,
-        left: "-50%",
-        ease: "power3.inOut",
-      });
-      gsap.to(".clip-top", 2, {
-        delay: 6,
-        clipPath: "inset(0 0 100% 0)",
-        ease: "power4.inOut",
-      });
-
-      gsap.to(".clip-bottom", 2, {
-        delay: 6,
-        clipPath: "inset(100% 0 0 0)",
-        ease: "power4.inOut",
-      });
-
-      gsap.to(
-        ".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span",
-        1,
-        {
-          delay: 6,
-          opacity: 0,
-          ease: "power2.inOut",
-        }
-      );
-      // Fade out loader after 5 seconds
-      gsap.to(".loader", {
-        delay: 7,
-        duration: 1,
-        opacity: 0,
-
-        onComplete: () => {
-          // Remove loader from DOM
-          document.querySelector(".loader").remove();
-        },
-      });
     </script>
   </body>
 </html>
