@@ -226,7 +226,7 @@ multiset<Class> load_data(string batch) {
   multiset<Class> loadedData;
   string filename;
   // cout<<batch;
-  filename = "Bin\\"+batch+".bin";
+  filename = batch+".bin";
 
   ifstream in(filename, ios::binary);
   if (!in) {

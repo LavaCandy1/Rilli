@@ -977,6 +977,27 @@ h1 {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
+.Teacher {
+  background-color: #e2a8bc;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  border-radius: 9px;
+  user-select: none;
+  transition: 0.3s ease-in-out;
+  color: #5e0c28;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 96px;
+  border: 1px solid #e09d8e;
+}
+.Teacher:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
 .cTime {
   color: #000;
   font-size: 18px;
