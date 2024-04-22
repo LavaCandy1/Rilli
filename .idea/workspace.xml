@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
@@ -7,18 +10,99 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccd28177-1fc4-4e2c-a25b-ebed4366157d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Front End/pret2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front End/pret2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front End/rilliM.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front End/rilliM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front End/rilliM_updtate.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front End/rilliM_updtate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front End/rilli_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front End/rilli_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log testing 9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Log testing 9.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b40.bin" beforeDir="false" afterPath="$PROJECT_DIR$/b40.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B1.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B1.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B10.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B10.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B11.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B11.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B12.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B12.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B13.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B13.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B14.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B14.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B15.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B15.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B16.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B16.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B17.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B17.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B18.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B18.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B19.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B19.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B2.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B2.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B20.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B20.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B21.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B21.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B23.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B23.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B24.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B24.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B25.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B25.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B26.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B26.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B27.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B27.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B28.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B28.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B29.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B29.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B3.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B3.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B30.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B30.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B31.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B31.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B32.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B32.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B33.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B33.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B34.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B34.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B35.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B35.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B36.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B36.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B37.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B37.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B38.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B38.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B39.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B39.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B4.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B40.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B40.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B41.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B41.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B42.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B42.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B43.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B43.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B44.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B44.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B45.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B45.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B46.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B46.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B47.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B47.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B48.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B48.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B49.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B49.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B5.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B5.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B50.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B50.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B51.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B51.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B52.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B52.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B53.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B53.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B54.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B54.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B55.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B55.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B56.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B56.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B57.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B57.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B58.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B58.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B59.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B59.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B6.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B6.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B60.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B60.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B61.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B61.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B62.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B62.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B63.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B63.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B64.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B64.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B65.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B65.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B66.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B66.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B67.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B67.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B68.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B68.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B69.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B69.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B70.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B70.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B71.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B71.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B72.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B72.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B73.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B73.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B74.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B74.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B75.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B75.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B76.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B76.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B77.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B77.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B78.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B78.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B79.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B79.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B80.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B80.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bin/Time_Table_2023-24-even_BTECH_First_B9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front End/rilliTeacher_updtae.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TT_extract/betterYear.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TT_extract/betterYear.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TT_extract/htm_to_xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher_res.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/connect.c++" beforeDir="false" afterPath="$PROJECT_DIR$/connect.c++" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.exe" beforeDir="false" afterPath="$PROJECT_DIR$/connect.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coordinate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coordinate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordinate.exe" beforeDir="false" afterPath="$PROJECT_DIR$/coordinate.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/HuffDuff/DemoClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/HuffDuff/DemoClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_to_multi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/csv_to_multi.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_to_multi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/csv_to_multi.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_manipulation/auto_save.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/file_manipulation/auto_save.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_manipulation/deserialization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/file_manipulation/deserialization.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/input.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moderator_res.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/moderator_res.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/text.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +115,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2eKW5j3pFvgFNzzuRwCriDsQV6l" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,13 +126,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Rilli - Versions/Rilli - Live/Rilli",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,6 +154,8 @@
       <option name="presentableId" value="Default" />
       <updated>1711653570862</updated>
       <workItem from="1711653571814" duration="87000" />
+      <workItem from="1713724387439" duration="3868000" />
+      <workItem from="1713779441130" duration="4731000" />
     </task>
     <servers />
   </component>

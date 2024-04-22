@@ -4,25 +4,25 @@
 
 using namespace std;
 
-int getCoordinateNumber(const string& day, const string& timeSlot) {
-    map<string, int> dayMap = {
-        {"monday", 1}, {"tuesday", 2}, {"wednesday", 3}, {"thursday", 4},
-        {"friday", 5}, {"saturday", 6}
-    };
+// int getCoordinateNumber(const string& day, const string& timeSlot) {
+//     map<string, int> dayMap = {
+//         {"monday", 1}, {"tuesday", 2}, {"wednesday", 3}, {"thursday", 4},
+//         {"friday", 5}, {"saturday", 6}
+//     };
 
-    map<string, int> timeSlotMap = {
-        {"08:30", 1}, {"09:30", 2}, {"10:30", 3}, {"11:30", 4}, {"12:30",5},
-        {"13:30", 6}, {"14:30", 7}, {"15:30", 8}, {"16:30", 9}, {"17:30",10}
-    };
+//     map<string, int> timeSlotMap = {
+//         {"08:30", 1}, {"09:30", 2}, {"10:30", 3}, {"11:30", 4}, {"12:30",5},
+//         {"13:30", 6}, {"14:30", 7}, {"15:30", 8}, {"16:30", 9}, {"17:30",10}
+//     };
 
-    if (dayMap.find(day) != dayMap.end() && timeSlotMap.find(timeSlot) != timeSlotMap.end()) {
-        int dayNumber = dayMap[day];
-        int timeSlotNumber = timeSlotMap[timeSlot];
-        return ((dayNumber - 1) * timeSlotMap.size()) + timeSlotNumber;
-    } else {
-        return -1;
-    }
-}
+//     if (dayMap.find(day) != dayMap.end() && timeSlotMap.find(timeSlot) != timeSlotMap.end()) {
+//         int dayNumber = dayMap[day];
+//         int timeSlotNumber = timeSlotMap[timeSlot];
+//         return ((dayNumber - 1) * timeSlotMap.size()) + timeSlotNumber;
+//     } else {
+//         return -1;
+//     }
+// }
 
 
 pair<string, string> getDayAndTimeSlot(int coordinateNumber) {
@@ -44,6 +44,34 @@ pair<string, string> getDayAndTimeSlot(int coordinateNumber) {
         return {"Invalid", "Invalid"};
     }
 }
+
+
+// #include <map>
+// #include <string>
+
+int getCoordinateNumber(const std::string& day, const std::string& timeSlot) {
+    std::map<std::string, int> dayMap = {
+        {"Monday", 1}, {"Tuesday", 2}, {"Wednesday", 3}, {"Thursday", 4},
+        {"Friday", 5}, {"Saturday", 6}
+    };
+
+    std::map<std::string, int> timeSlotMap = {
+        {"08:30", 1}, {"09:30", 2}, {"10:30", 3}, {"11:30", 4}, {"12:30", 5},
+        {"13:30", 6}, {"14:30", 7}, {"15:30", 8}, {"16:30", 9}, {"17:30", 10}
+    };
+
+    // Check if the given day and time slot exist in the maps
+    if (dayMap.find(day) != dayMap.end() && timeSlotMap.find(timeSlot) != timeSlotMap.end()) {
+        int dayNumber = dayMap[day];
+        int timeSlotNumber = timeSlotMap[timeSlot];
+        return (dayNumber - 1) * timeSlotMap.size() + timeSlotNumber;
+    } else {
+        // Return -1 for invalid input
+        return -1;
+    }
+}
+
+
 
 
 // int main() {
