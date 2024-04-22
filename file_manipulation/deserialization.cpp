@@ -257,12 +257,10 @@ void auto_load(multiset<Class> &m, string batch) {
 }
 
 
-void deserialize_teach(multiset<Class> &m, string batch,string year,string course) {
+void deserialize_teach(multiset<Class> &m, string path) {
 
-  string filename;
-  string year_m = betterYear(year);
-  string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
-  filename = "Bin\\"+path+".bin";
+  string filename = path+".bin";
+  string batch = "B04";
 
   ifstream in(filename, ios::binary);
   if (!in) {

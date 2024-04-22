@@ -1020,7 +1020,7 @@ int Teacher_resp(string Tname) {
   for(const auto& slot : data){
     roomno[slotno] = slot.room_No;
     course[slotno] = slot.course_Code;
-    teacher[slotno] = slot.professor; // batch name for teacher
+    teacher[slotno] = slot.professor;
     type[slotno] = slot.type;
     slotno++;
     // cout<<slot.slot_Num<<"\t"<<slot.course_Code<<endl;

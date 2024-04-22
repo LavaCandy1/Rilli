@@ -664,7 +664,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     group_m = "G0";
 
     cout<<"\niinputing into teach_res";
-    teacher_input(room_No,professor,batch_m,group_m,time,day,class_type_m);
+    teacher_input(room_No,professor,batch_m,group_m,time,day,class_type_m,teach_name);
     cout<<"\nrestarting teach_res page";
 
     Teacher_resp(teach_name);
@@ -673,7 +673,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     });
     
 
-
+    
 
 
 svr.set_default_headers({

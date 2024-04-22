@@ -275,7 +275,7 @@ int mod_input(string r,string cc,string p,string batch,string y,string g,string 
 
 
 
-int teacher_input(string r,string p,string batch,string g,string t,string d,string type){
+int teacher_input(string r,string p,string batch,string g,string t,string d,string type,string Tname){
 
     
     multiset<Class> Batch40;
@@ -284,7 +284,9 @@ int teacher_input(string r,string p,string batch,string g,string t,string d,stri
     int slot_no = getCoordinateNumber(d,t);
     cout<<"\n\n--"<<slot_no<<"--\t--"<<r<<"--"<<p<<"--"<<g<<"--"<<type;
     auto slot = give_Input(slot_no,r,course,p,batch,year_m,g,t,d,type);
-    deserialize_teach(Batch40,batch,year_m,course);
+
+    string path = "Teach Bin\\Time_Table_2023-24-even_"+Tname;
+    deserialize_teach(Batch40,path);
     cout<<"\ndeserialized";
     // Batch40.insert(slot);
     for(auto& slot_ : Batch40){
@@ -298,7 +300,7 @@ int teacher_input(string r,string p,string batch,string g,string t,string d,stri
     cout<<"\ninserting";
     Batch40.insert(slot);
     cout<<"\nstarting saving";
-    auto_save(Batch40,batch,year_m,course);
+    auto_save_teach(Batch40,path);
     cout<<"\nSaved";
     
     // cout<<s<<r<<type;
