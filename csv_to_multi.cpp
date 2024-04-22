@@ -30,6 +30,7 @@ string year = "1st Year";
 string group = "G1"; //make a code to find group from batch or vise versa
 string batch = "Batch";
 
+
 void insert_TimeTable(multiset<Class> TimeTable,string cell){
     auto result = parse_string(cell);
     for(int i=0;i<10;i++){
