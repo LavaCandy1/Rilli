@@ -482,7 +482,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     svr.Post("/rilli_mod_dev", [&](const httplib::Request& req, httplib::Response& res) {
     
     int slot_No;
-    string room_No = req.get_param_value("class_name");
+    string room_No = req.get_param_value("room_no");
     string professor = req.get_param_value("Teacher_Name");
     string time = req.get_param_value("time1");
     string course_Code = req.get_param_value("course_code");
