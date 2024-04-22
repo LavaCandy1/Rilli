@@ -7,8 +7,6 @@
 html {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-
-  scroll-behavior: smooth;
 }
 
 * {
@@ -59,6 +57,19 @@ body {
   --text2-color: #080a1a;
   --text3-color: #0088b5;
 }
+
+.char {
+  transform: translateY(200px);
+  transition: transform 0.5s;
+}
+.Anim {
+  transform: translateY(200px);
+  transition: transform 0.5s;
+}
+.myGSAP {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .GolGol {
   opacity: 1;
   margin: 0;
@@ -95,6 +106,8 @@ body {
 /* NAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 /* NAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 #nav {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,6 +115,7 @@ body {
   padding: 30px 50px;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
+  z-index: 10;
 }
 #nav #right {
   display: flex;
@@ -118,9 +132,12 @@ body {
   padding: 0vw 15vw;
 }
 #base span {
+  position: fixed;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "canopee";
-  height: 14vw;
-  font-size: 18vw;
+  font-size: 3vw;
   color: var(--seventh-color);
 }
 
@@ -158,6 +175,7 @@ body {
   border-top-right-radius: 90px;
   min-height: 100vh;
   background-color: transparent;
+  z-index: 999;
   /* border: #c9c6cb solid 1px; */
 }
 
@@ -174,10 +192,6 @@ body {
   font-size: 20px;
   font-weight: bolder;
   border: none;
-}
-.stick {
-  position: sticky;
-  top: 0;
 }
 /* DESCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC */
 /* DESCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC */
@@ -197,13 +211,17 @@ body {
   width: 60%;
   gap: 70px;
 }
-#desc h1 {
+#desc #myGSAP1 .line {
   font-size: 6vw;
   font-weight: 500;
   letter-spacing: -8px;
   line-height: 1;
-  color: #9d559f;
+
   transition: 0.4s;
+}
+
+#myGSAP1 .word .char {
+  color: #9d559f;
 }
 .liner {
   display: flex;
@@ -214,7 +232,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-#desc h2 {
+#desc h2 div {
   font-size: 1.6vw;
   font-weight: 400;
   letter-spacing: -0.08vw;
