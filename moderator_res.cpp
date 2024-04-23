@@ -1185,7 +1185,7 @@ void mod_res_str(string batch_m, string year_m, string course){
   // auto settings = parse_string(batch_m);
   // string batch = get<2>(settings);
   string year = betterYear(year_m);
-  string path = "Time_Table_2023-24-even_"+course+"_"+year+"_"+batch_m;
+  string path = "Bin\\Time_Table_2023-24-even_"+course+"_"+year+"_"+batch_m;
   cout<<"\nloading data from bin file";
   auto data = load_data(path);
   cout<<"\nloaded";
