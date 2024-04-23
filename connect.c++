@@ -18,7 +18,7 @@
 using namespace std;
 
 
-
+string teach_name;
 
 int main() {
     httplib::Server svr;
@@ -520,7 +520,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     string time = req.get_param_value("time1");
     string course_Code = req.get_param_value("course_code");
     string day = req.get_param_value("day");
-    cout<<"--"<<room_No<<"--"<<professor<<"--"<<class_type_m<<"--"<<time<<"--"<<day<<"--"<<course_Code;
+    // cout<<"--"<<room_No<<"--"<<professor<<"--"<<class_type_m<<"--"<<time<<"--"<<day<<"--"<<course_Code;
 
     cout<<"\niinputing into mod_res";
     mod_input(room_No,course_Code,professor,batch_m,year_m,group_m,time,day,class_type_m);
@@ -531,6 +531,7 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
 
     });
 
+    
 
 
     //-----delete(post)-----------
@@ -638,6 +639,8 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
         res.set_redirect("/rilli_mod");
     
     } else if(role=="teacher"){
+        teach_name = enrollmentID;
+        Teacher_resp(teach_name);
     //     string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
     //     string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
         
@@ -677,9 +680,33 @@ svr.Post("/rilli_mod", [&](const httplib::Request& req, httplib::Response& res) 
     }
     });
 
+
+
+//-----------Teacher add POST------------------
+     svr.Post("/rilli_teach_dev", [&](const httplib::Request& req, httplib::Response& res) {
+    
+    int slot_No;
+    string room_No = req.get_param_value("room_no");
+    string professor = req.get_param_value("Teacher_Name");
+    string time = req.get_param_value("time1");
+    string course_Code = req.get_param_value("course_code");
+    string day = req.get_param_value("day");
+    // cout<<"--"<<room_No<<"--"<<professor<<"--"<<class_type_m<<"--"<<time<<"--"<<day<<"--"<<course_Code;
+    class_type_m = "Teacher";
+    batch_m = "B00";
+    group_m = "G0";
+
+    cout<<"\niinputing into teach_res";
+    teacher_input(room_No,professor,batch_m,group_m,time,day,class_type_m,teach_name);
+    cout<<"\nrestarting teach_res page";
+
+    Teacher_resp(teach_name);
+    res.set_redirect("/rilli_Teach_up");
+
+    });
     
 
-
+    
 
 
 svr.set_default_headers({

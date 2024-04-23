@@ -272,3 +272,58 @@ int mod_input(string r,string cc,string p,string batch,string y,string g,string 
     return 0;
 
 }
+
+
+
+int teacher_input(string r,string p,string batch,string g,string t,string d,string type,string Tname){
+
+    
+    multiset<Class> Batch40;
+    string year_m = "First";
+    string course = "BTECH";
+    int slot_no = getCoordinateNumber(d,t);
+    cout<<"\n\n--"<<slot_no<<"--\t--"<<r<<"--"<<p<<"--"<<g<<"--"<<type;
+    auto slot = give_Input(slot_no,r,course,p,batch,year_m,g,t,d,type);
+
+    string path = "Teach Bin\\Time_Table_2023-24-even_"+Tname;
+    deserialize_teach(Batch40,path);
+    cout<<"\ndeserialized";
+    // Batch40.insert(slot);
+    for(auto& slot_ : Batch40){
+      if(slot_.slot_Num==slot.slot_Num){
+        cout<<"\ninside if";
+        Batch40.erase(slot_);
+        cout<<"\nerased";
+        break;
+      }
+    }
+    cout<<"\ninserting";
+    Batch40.insert(slot);
+    cout<<"\nstarting saving";
+    auto_save_teach(Batch40,path);
+    cout<<"\nSaved";
+    
+    // cout<<s<<r<<type;
+    // string year_m = "First";
+    // string course = "BTECH";
+
+    // string filename;
+    // // string year_m = betterYear(year);
+    // string path = "Time_Table_2023-24-even_"+course+"_"+year_m+"_"+batch;
+    // filename = "Bin\\"+path+".bin";
+    // //making a bin file and writing in it
+    // ofstream out(filename, ios::binary | ios::app);
+    // if (!out) {
+    //     cerr << "Error opening file. here" << endl;
+    //     return 1;
+    // }
+
+    // serialize(Batch40, out);
+    // out.close();
+
+
+
+
+    return 0;
+
+}

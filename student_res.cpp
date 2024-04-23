@@ -842,8 +842,6 @@ int student_resp(string batch_m, string enroll) {
   string course_m = "BTECH";
   string year_m = "1st Year";
 
-  string weekdays[] = {"monday", "tuesday", "wednesday", "thursday", "friday"};
-  string timeslots[] = {"08:30", "09:30", "10:30", "11:30", "13:30", "14:30","15:30","16:30"};
   int sizeee = 60;
   string roomno[sizeee];
   string course[sizeee];
@@ -857,7 +855,7 @@ int student_resp(string batch_m, string enroll) {
   }
 
   string year = betterYear(year_m);
-  string path = "Time_Table_2023-24-even_"+course_m+"_"+year+"_"+batch_m;
+  string path = "Bin\\Time_Table_2023-24-even_"+course_m+"_"+year+"_"+batch_m;
   auto data = load_data(path);
   int slotno = 0;
   for(const auto& slot : data){

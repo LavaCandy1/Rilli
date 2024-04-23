@@ -50,7 +50,7 @@ string generateHTMLWithCSS_teach(string roomno[],string course_Code[],string tea
       </button>
       <!-- <button class="item-5" id="changeZIndexButton2"></button> -->
     </div>
-    <form action="">
+    <form action="/rilli_teach_dev" method="post">
       <div class="tName fle">
         <div class="input-box">
           <input
@@ -59,8 +59,9 @@ string generateHTMLWithCSS_teach(string roomno[],string course_Code[],string tea
             id="username"
             placeholder=""
             required
+            name = "Teacher_Name"
           />
-          <label for="username">Name</label>
+          <label for="username">Batch Name</label>
         </div>
       </div>
       <div class="sSubject fle">
@@ -71,6 +72,7 @@ string generateHTMLWithCSS_teach(string roomno[],string course_Code[],string tea
             id="password"
             placeholder="Subject"
             required
+            name = "course_code"
           />
           <label for="p">Subject</label>
         </div>
@@ -83,6 +85,7 @@ string generateHTMLWithCSS_teach(string roomno[],string course_Code[],string tea
             id="password"
             placeholder="Subject"
             required
+            name = "room_no"
           />
           <label for="p">Room Code</label>
         </div>
@@ -997,7 +1000,31 @@ function handleDropdown(dropdown, arrow, open) {
     return htmlContent;
 }
 
-int Teacher_resp(string roomno[],string course[],string teacher[],string type[]) {
+int Teacher_resp(string Tname) {
+
+  int sizeee = 60;
+  string roomno[sizeee];
+  string course[sizeee];
+  string teacher[sizeee];
+  string type[sizeee];
+  for (int i = 0; i < sizeee; ++i) {
+    roomno[i] = "DefaultRoom";
+    course[i] = "DefaultCourse";
+    teacher[i] = "DefaultTeacher";
+    type[i] = "invis";
+  }
+
+  string path = "Teach Bin\\Time_Table_2023-24-even_"+Tname;
+  auto data = load_data(path);
+  int slotno = 0;
+  for(const auto& slot : data){
+    roomno[slotno] = slot.room_No;
+    course[slotno] = slot.course_Code;
+    teacher[slotno] = slot.professor;
+    type[slotno] = slot.type;
+    slotno++;
+    // cout<<slot.slot_Num<<"\t"<<slot.course_Code<<endl;
+  }
     // Get CSS-related data from your backend logic
     double divOpacity = 0.7; // Replace with your actual logic to get the opacity
 
