@@ -399,6 +399,27 @@ svr.Get("/Assets/R.mp4", [](const httplib::Request& req, httplib::Response& res)
     }
 });
 
+svr.Get("/Assets/Clips/Main.mp4", [](const httplib::Request& req, httplib::Response& res) {
+    std::ifstream video_file("Front End\\Assets\\Clips\\Main.mp4", std::ios::binary);
+    if (video_file.is_open()) {
+        std::string video_content((std::istreambuf_iterator<char>(video_file)), std::istreambuf_iterator<char>());
+        res.set_content(video_content, "video/mp4"); // Correct content type for video file
+    } else {
+        res.status = 404;
+        res.set_content("File not found", "text/plain");
+    }
+});
+
+ svr.Get("/Assets/logo.png", [](const httplib::Request& req, httplib::Response& res) {
+        std::ifstream img_file("Front End\\Assets\\logo.png", std::ios::binary);
+        if (img_file.is_open()) {
+            std::string img_content((std::istreambuf_iterator<char>(img_file)), std::istreambuf_iterator<char>());
+            res.set_content(img_content, "image/jpeg");
+        } else {
+            res.status = 404;
+            res.set_content("File not found", "text/plain");
+        }
+    });
 
 
     
