@@ -9,16 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccd28177-1fc4-4e2c-a25b-ebed4366157d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front End/rilliTeacher_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front End/rilliTeacher_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teach Bin/Time_Table_2023-24-even_T2.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Teach Bin/Time_Table_2023-24-even_T2.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teacher_res.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Teacher_res.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.c++" beforeDir="false" afterPath="$PROJECT_DIR$/connect.c++" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_manipulation/auto_save.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/file_manipulation/auto_save.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_manipulation/deserialization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/file_manipulation/deserialization.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/input.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="ccd28177-1fc4-4e2c-a25b-ebed4366157d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +39,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Teacher__add",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Rilli - Versions/Rilli - Live/Rilli",
     "node.js.detected.package.eslint": "true",
